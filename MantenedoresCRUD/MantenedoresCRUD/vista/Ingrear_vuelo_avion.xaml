@@ -1,0 +1,52 @@
+﻿<Window x:Class="MantenedoresCRUD.vista.Ingrear_vuelo_avion"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:MantenedoresCRUD.vista"
+        mc:Ignorable="d"
+        Title="Ingrear_vuelo_avion"  Height="700.5" Width="758" Background="Transparent" WindowStartupLocation="CenterScreen" ResizeMode="NoResize" WindowStyle="None" AllowsTransparency="True" Icon="../skyicon.ico">
+    <Grid Background="#FF1F4F6E" MouseLeftButtonDown="DockPanel_MouseLeftButtonDown">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="65*"/>
+            <RowDefinition Height="69*"/>
+            <RowDefinition Height="466*"/>
+        </Grid.RowDefinitions>
+        <Rectangle Fill="#FFF5F5FF" Height="643" Margin="10,45,0,0" Stroke="White" VerticalAlignment="Top" Grid.RowSpan="3" HorizontalAlignment="Left" Width="740"/>
+        <Image x:Name="image" HorizontalAlignment="Left" Height="71" Margin="10,0,0,0" Grid.Row="1" VerticalAlignment="Top" Width="172" Source="Resources/sky logo.png" Grid.RowSpan="2"/>
+        <Label x:Name="label1" Content="Ingresar Vuelo" HorizontalAlignment="Left" Margin="10,14,0,0" VerticalAlignment="Top" FontSize="16" FontWeight="Medium" Foreground="White" Height="31" Width="115"/>
+        <Button x:Name="buttonCancel" Content="Cancelar" HorizontalAlignment="Left" Margin="678,0.167,0,0" Grid.Row="1" VerticalAlignment="Top" Width="53" Height="32" Background="{x:Null}" Click="buttonCancel_Click"/>
+        <Label x:Name="label" Content="PASO 2, SELECCIONE AERONAVE" HorizontalAlignment="Left" Margin="160,53.167,0,0" Grid.Row="1" VerticalAlignment="Top" Height="26" Width="220"/>
+        <Label x:Name="labelHorasDespegue"  HorizontalAlignment="Left" Margin="370,142,0,0" Grid.Row="2" VerticalAlignment="Top" FontWeight="Medium" Foreground="#FF7D84CB"/>
+        <Label x:Name="labelHoraArribo"  HorizontalAlignment="Left" Margin="370,209,0,0" Grid.Row="2" VerticalAlignment="Top" FontWeight="Medium" Foreground="#FF7D84CB"/>
+        <GroupBox x:Name="groupBox" Header="Busqueda" HorizontalAlignment="Left" Margin="36,3.667,0,0" Grid.Row="2" VerticalAlignment="Top" Height="98" Width="262"/>
+        <ComboBox x:Name="comboBoxTipoAeronave" HorizontalAlignment="Left" Margin="62,24.667,0,0" Grid.Row="2" VerticalAlignment="Top" Width="120" SelectionChanged="comboBoxTipoAeronave_SelectionChanged"/>
+        <TextBox x:Name="textBoxMatricula" HorizontalAlignment="Left" Height="23" Margin="62,66.667,0,0" Grid.Row="2" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" TextChanged="textBoxMatricula_TextChanged"/>
+        <Button x:Name="buttonBuscar" Content="Buscar" HorizontalAlignment="Left" Margin="206,41.667,0,0" Grid.Row="2" VerticalAlignment="Top" Width="76" Click="buttonBuscar_Click"/>
+        <GroupBox x:Name="groupBox1" Header="Seleccionar Aeronave" HorizontalAlignment="Left" Margin="36,101.667,0,0" Grid.Row="2" VerticalAlignment="Top" Height="419" Width="695">
+            <ListView x:Name="listViewAeronave" HorizontalAlignment="Left" Height="126" Margin="314,10,0,0" VerticalAlignment="Top" Width="328">
+                <ListView.View>
+                    <GridView>
+                        <GridViewColumn/>
+                    </GridView>
+                </ListView.View>
+            </ListView>
+        </GroupBox>
+        <DataGrid x:Name="dataGridListaNave" HorizontalAlignment="Left" Margin="45,123.667,0,0" Grid.Row="2" VerticalAlignment="Top" Height="388" Width="281" Background="#FFA5CBCF" BorderBrush="#FF101F64" RowBackground="#FFD6ECF0" IsReadOnly="True"/>
+        <DataGrid x:Name="dataGrid" HorizontalAlignment="Left" Margin="356,275.667,0,0" Grid.Row="2" VerticalAlignment="Top" Height="184" Width="302" RenderTransformOrigin="0.487,0.476" IsReadOnly="True">
+            <DataGrid.Columns>
+                    <DataGridTemplateColumn>
+                        <DataGridTemplateColumn.CellTemplate>
+                            <DataTemplate>
+                                <Button Click="ChangeText" Background="{x:Null}" Foreground="Black" Focusable="False">Seleccionar</Button>
+                            </DataTemplate>
+                        </DataGridTemplateColumn.CellTemplate>
+                    </DataGridTemplateColumn>
+                </DataGrid.Columns>
+            </DataGrid>
+        <Label x:Name="labelPrueba" Content="Label" HorizontalAlignment="Left" Margin="418,44.167,0,0" Grid.Row="1" VerticalAlignment="Top"/>
+    </Grid>
+</Window>

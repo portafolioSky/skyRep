@@ -1,0 +1,14 @@
+create or replace PROCEDURE "MANTENCION_BY_MATRICULA" (matricula_nave_var IN MANTENIMIENTO_AERONAVE.MATRICULA_AERONAVE%TYPE, p_recordset OUT SYS_REFCURSOR)
+AS
+begin
+OPEN p_recordset FOR
+SELECT
+mant.MATRICULA_AERONAVE as "Matricula",
+mant.FECHA_INSPECCION as "Inspeccion",
+mant.ESTADO as "Estado",
+mant.RUT_ENCARGADO as "Encargado"
+FROM
+MANTENIMIENTO_AERONAVE mant
+where mant.MATRICULA_AERONAVE like matricula_nave_var
+ORDER BY mant.MATRICULA_AERONAVE;
+end;

@@ -26,27 +26,18 @@
         <ComboBox x:Name="comboBoxTipoAeronave" HorizontalAlignment="Left" Margin="62,24.667,0,0" Grid.Row="2" VerticalAlignment="Top" Width="120" SelectionChanged="comboBoxTipoAeronave_SelectionChanged"/>
         <TextBox x:Name="textBoxMatricula" HorizontalAlignment="Left" Height="23" Margin="62,66.667,0,0" Grid.Row="2" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" TextChanged="textBoxMatricula_TextChanged"/>
         <Button x:Name="buttonBuscar" Content="Buscar" HorizontalAlignment="Left" Margin="206,41.667,0,0" Grid.Row="2" VerticalAlignment="Top" Width="76" Click="buttonBuscar_Click"/>
-        <GroupBox x:Name="groupBox1" Header="Seleccionar Aeronave" HorizontalAlignment="Left" Margin="36,101.667,0,0" Grid.Row="2" VerticalAlignment="Top" Height="419" Width="695">
-            <ListView x:Name="listViewAeronave" HorizontalAlignment="Left" Height="126" Margin="314,10,0,0" VerticalAlignment="Top" Width="328">
-                <ListView.View>
-                    <GridView>
-                        <GridViewColumn/>
-                    </GridView>
-                </ListView.View>
-            </ListView>
-        </GroupBox>
-        <DataGrid x:Name="dataGridListaNave" HorizontalAlignment="Left" Margin="45,123.667,0,0" Grid.Row="2" VerticalAlignment="Top" Height="388" Width="281" Background="#FFA5CBCF" BorderBrush="#FF101F64" RowBackground="#FFD6ECF0" IsReadOnly="True"/>
-        <DataGrid x:Name="dataGrid" HorizontalAlignment="Left" Margin="356,275.667,0,0" Grid.Row="2" VerticalAlignment="Top" Height="184" Width="302" RenderTransformOrigin="0.487,0.476" IsReadOnly="True">
+        <GroupBox x:Name="groupBox1" Header="Seleccionar Aeronave" HorizontalAlignment="Left" Margin="36,101.667,0,0" Grid.Row="2" VerticalAlignment="Top" Height="361" Width="695"/>
+        <DataGrid x:Name="dataGridListaNave" HorizontalAlignment="Left" Margin="45,123.667,0,0" Grid.Row="2" VerticalAlignment="Top" Height="328" Width="677" Background="#FFA5CBCF" BorderBrush="#FF101F64" RowBackground="#FFD6ECF0" IsReadOnly="True">
             <DataGrid.Columns>
-                    <DataGridTemplateColumn>
-                        <DataGridTemplateColumn.CellTemplate>
-                            <DataTemplate>
-                                <Button Click="ChangeText" Background="{x:Null}" Foreground="Black" Focusable="False">Seleccionar</Button>
-                            </DataTemplate>
-                        </DataGridTemplateColumn.CellTemplate>
-                    </DataGridTemplateColumn>
-                </DataGrid.Columns>
-            </DataGrid>
-        <Label x:Name="labelPrueba" Content="Label" HorizontalAlignment="Left" Margin="418,44.167,0,0" Grid.Row="1" VerticalAlignment="Top"/>
+                <DataGridTemplateColumn Header="Seleccion">
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <Button  Click="ChangeText" Background="#FF33588D" Foreground="white" Focusable="False">Seleccionar</Button>
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+            </DataGrid.Columns>
+        </DataGrid>
+        <Button x:Name="button" Content="&lt; Atras" HorizontalAlignment="Left" Margin="45,488.667,0,0" Grid.Row="2" VerticalAlignment="Top" Width="75" Click="button_Click"/>
     </Grid>
 </Window>

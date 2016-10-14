@@ -6,20 +6,32 @@ using System.Threading.Tasks;
 
 namespace MantenedoresCRUD.modelo
 {
-    class Vuelo
+    public class Vuelo
     {
         private DateTime fechaSalida;
         private DateTime fechaArribo;
-        private string horaSalida;
-        private string horaArribo;
+        private double totalTiempo;
         private int idCondicionVuelo;
         private string matriculaAeronave;
-        private string ciudadOrigen;
-        private string ciudadDestino;
-        private Tripulacion tripulacion;
+        private int ciudadOrigen;
+        private int ciudadDestino;
         private string kilometros;
+        private string estado;
 
         public Vuelo() { }
+
+        public Vuelo(DateTime fechaSalida, DateTime fechaArribo, double totalTiempo, int idCondicionVuelo, string matriculaAeronave, int ciudadOrigen, int ciudadDestino, string kilometros, string estado)
+        {
+            this.fechaSalida = fechaSalida;
+            this.fechaArribo = fechaArribo;
+            this.totalTiempo = totalTiempo;
+            this.idCondicionVuelo = idCondicionVuelo;
+            this.matriculaAeronave = matriculaAeronave;
+            this.ciudadOrigen = ciudadOrigen;
+            this.ciudadDestino = ciudadDestino;
+            this.kilometros = kilometros;
+            this.estado = estado;
+        }
 
         public DateTime FechaSalida
         {
@@ -47,31 +59,7 @@ namespace MantenedoresCRUD.modelo
             }
         }
 
-        public string HoraSalida
-        {
-            get
-            {
-                return horaSalida;
-            }
-
-            set
-            {
-                horaSalida = value;
-            }
-        }
-
-        public string HoraArribo
-        {
-            get
-            {
-                return horaArribo;
-            }
-
-            set
-            {
-                horaArribo = value;
-            }
-        }
+     
 
         public int IdCondicionVuelo
         {
@@ -99,7 +87,7 @@ namespace MantenedoresCRUD.modelo
             }
         }
 
-        public string CiudadOrigen
+        public int CiudadOrigen
         {
             get
             {
@@ -112,7 +100,7 @@ namespace MantenedoresCRUD.modelo
             }
         }
 
-        public string CiudadDestino
+        public int CiudadDestino
         {
             get
             {
@@ -125,16 +113,29 @@ namespace MantenedoresCRUD.modelo
             }
         }
 
-        internal Tripulacion Tripulacion
+        public double TotalTiempo
         {
             get
             {
-                return tripulacion;
+                return totalTiempo;
             }
 
             set
             {
-                tripulacion = value;
+                totalTiempo = value;
+            }
+        }
+
+        public string Estado
+        {
+            get
+            {
+                return estado;
+            }
+
+            set
+            {
+                estado = value;
             }
         }
 
@@ -151,17 +152,6 @@ namespace MantenedoresCRUD.modelo
             }
         }
 
-        public Vuelo(DateTime fechaSalida, DateTime fechaArribo, string horaSalida, string horaArribo, int idCondicionVuelo, string matriculaAeronave, string ciudadOrigen, string ciudadDestino, Tripulacion tripulacion)
-        {
-            this.fechaSalida = fechaSalida;
-            this.fechaArribo = fechaArribo;
-            this.horaSalida = horaSalida;
-            this.horaArribo = horaArribo;
-            this.idCondicionVuelo = idCondicionVuelo;
-            this.matriculaAeronave = matriculaAeronave;
-            this.ciudadOrigen = ciudadOrigen;
-            this.ciudadDestino = ciudadDestino;
-            this.tripulacion = tripulacion;
-        }
+        
     }
 }

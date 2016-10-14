@@ -28,8 +28,8 @@ namespace MantenedoresCRUD.vista
         private Ciudad ciudadOrigen;
         private Ciudad ciudadDestino;
         private int idCondicionVuelo;
-        private DateTime hora;
-
+        private string shora;
+        private string hora;
 
         public Ingresar_vuelo()
         {
@@ -41,9 +41,13 @@ namespace MantenedoresCRUD.vista
             comboBoxOrigen.SelectedValuePath = "ID_CIUDAD";
             comboBoxOrigen.ItemsSource = dsCiudad.Tables["nombre_ciudad"].DefaultView;
             comboBoxDestino.IsEnabled = false;
-            dpFechaSalida.DisplayDateStart = DateTime.Now;
-            dpFechaSalida.DisplayDateEnd = DateTime.Now.AddDays(30);
-
+            NeVuelo h = new NeVuelo();
+            string[] date = new string[] { };
+            date = h.recomendarDespegue();
+            dpFechaSalida.DisplayDateStart = DateTime.Parse(date[1]);
+            dpFechaSalida.DisplayDateEnd = DateTime.Parse(date[1]).AddDays(30);
+            horaDespegue.Value = Convert.ToDouble(date[0]);
+            dpFechaSalida.Text = date[1];
         }
 
 
@@ -76,11 +80,10 @@ namespace MantenedoresCRUD.vista
 
         private void slider_ValueChanged(object sender, RoutedPropertyChangedEventArgs<double> e)
         {
-            string shora = horaDespegue.Value.ToString();
+            shora = horaDespegue.Value.ToString();
             NeVuelo getHrDes = new NeVuelo();
             hora = getHrDes.getHoraDespegue(shora);
-            labelHorasDespegue.Content= hora.ToString("HH:mm")+" Hrs";
-
+            labelHorasDespegue.Content = hora+" Hrs";
         }
 
 
@@ -93,7 +96,7 @@ namespace MantenedoresCRUD.vista
                 fechaSelect = dpFechaSalida.SelectedDate.Value;
                 NeVuelo valFechaHora = new NeVuelo();
                 int resp;
-                resp= valFechaHora.validarFechaHora(fechaSelect,hora);
+                resp = valFechaHora.validarFechaHora(fechaSelect,hora);
 
                 switch (resp)
                 {
@@ -101,24 +104,31 @@ namespace MantenedoresCRUD.vista
                          MessageBox.Show("Debe seleccionar un fecha futura");
                         break;
                     case -2:
-                         MessageBox.Show("Hora despegue debe tener 4 horas de anticipacion");
+                         MessageBox.Show("Hora despegue debe tener 2 horas de anticipacion");
                         break;
                     case 0:
                         if (radioButtonIrf.IsChecked == false & radioButtonVrf.IsChecked == false) { MessageBox.Show("Verifique que no existan datos vacios"); return; }
 
-                        else if (radioButtonIrf.IsChecked == true) { Sesion.SetValue("condicionVuelo", idCondicionVuelo); }
-                        else if (radioButtonVrf.IsChecked == true) { Sesion.SetValue("condicionVuelo", idCondicionVuelo); }
+                        else if (radioButtonIrf.IsChecked == true) { Sesion.SetValue("idCondicionVuelo", idCondicionVuelo); }
+                        else if (radioButtonVrf.IsChecked == true) { Sesion.SetValue("idCondicionVuelo", idCondicionVuelo); }
 
                         ciudadOrigen = new Ciudad();
                         ciudadDestino = new Ciudad();
-                        ciudadOrigen.IdCiudad = Convert.ToInt32(comboBoxOrigen.SelectedValue.ToString());
-                        ciudadDestino.IdCiudad = Convert.ToInt32(comboBoxDestino.SelectedValue.ToString());
+                        ciudadOrigen.IdCiudad = Convert.ToInt16(comboBoxOrigen.SelectedValue.ToString());
+                        ciudadDestino.IdCiudad = Convert.ToInt16(comboBoxDestino.SelectedValue.ToString());
                         string origen = comboBoxOrigen.Text;
                         string destino = comboBoxDestino.Text;
+                        Sesion.SetValue("origen", origen);
+                        Sesion.SetValue("destino", destino);
+                        Sesion.SetValue("idOrigen", ciudadOrigen.IdCiudad);
+                        Sesion.SetValue("idDestino", ciudadDestino.IdCiudad);
                         double kmDistancia = new double();
                         kmDistancia = neVueloGetCiudad.getDintancia(ciudadOrigen, ciudadDestino);
                         Sesion.SetValue("kmDistancia", kmDistancia);
-                        Ingrear_vuelo_avion next = new Ingrear_vuelo_avion();
+                        Sesion.SetValue("fechaPartida", fechaSelect);
+                        Sesion.SetValue("showHoraPartida", hora);
+                        Sesion.SetValue("horaPartida", shora);
+                        Ingrear_vuelo_avion next = new Ingrear_vuelo_avion(this);
                         this.Hide();
                         next.ShowDialog();
                          break;
@@ -135,11 +145,13 @@ namespace MantenedoresCRUD.vista
         private void radioButtonIrf_Checked(object sender, RoutedEventArgs e)
         {
             idCondicionVuelo = 1;
+            Sesion.SetValue("NombreCondicionVuelo", radioButtonIrf.Content);
         }
 
         private void radioButtonVrf_Checked(object sender, RoutedEventArgs e)
         {
             idCondicionVuelo = 2;
+            Sesion.SetValue("NombreCondicionVuelo", radioButtonVrf.Content);
         }
     }
 }

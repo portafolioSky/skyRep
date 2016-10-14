@@ -16,6 +16,8 @@ namespace MantenedoresCRUD.modelo
         private String password;
         private String correo;
         private RolUsuario rolUsuario;
+        private DateTime fechaMeAeroespacial;
+        private LicenciaPiloto licencia;
 
 
         public Usuario() { }
@@ -125,6 +127,36 @@ namespace MantenedoresCRUD.modelo
 
             set
             {rolUsuario = value;}
+        }
+
+        public DateTime FechaMeAeroespacial
+        {
+            get
+            {
+                return fechaMeAeroespacial;
+            }
+
+            set
+            {
+                fechaMeAeroespacial = value;
+            }
+        }
+
+        public LicenciaPiloto Licencia
+        {
+            get
+            {
+                if (licencia == null)
+                {
+                    licencia = new LicenciaPiloto();
+                }
+                return licencia;
+            }
+
+            set
+            {
+                licencia = value;
+            }
         }
 
         public override string ToString()

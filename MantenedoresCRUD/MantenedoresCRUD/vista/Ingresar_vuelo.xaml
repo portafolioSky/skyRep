@@ -21,7 +21,7 @@
         <Label x:Name="label1" Content="Ingresar Vuelo" HorizontalAlignment="Left" Margin="10,14,0,0" VerticalAlignment="Top" FontSize="16" FontWeight="Medium" Foreground="White" Height="31" Width="115"/>
         <Button x:Name="buttonCancel" Content="Cancelar" HorizontalAlignment="Left" Margin="426,19,0,0" Grid.Row="1" VerticalAlignment="Top" Width="53" Height="32" Background="{x:Null}" Click="buttonCancel_Click"/>
         <GroupBox x:Name="groupBox3" Header="Ingresar Datos" HorizontalAlignment="Left" Margin="26,48,0,0" Grid.Row="2" VerticalAlignment="Top" Height="330" Width="453"/>
-        <Button x:Name="button" Content="Siguiente" HorizontalAlignment="Left" Margin="35,407,0,0" Grid.Row="2" VerticalAlignment="Top" Width="75" Height="22" Click="button_Click"/>
+        <Button x:Name="button" Content="Siguiente" HorizontalAlignment="Left" Margin="394,411,0,0" Grid.Row="2" VerticalAlignment="Top" Width="75" Height="22" Click="button_Click"/>
         <Label x:Name="label" Content="PASO 1, INGRESAR DATOS DEL VUELO" HorizontalAlignment="Left" Margin="35,17,0,0" Grid.Row="2" VerticalAlignment="Top" Height="26" Width="220"/>
         <Label x:Name="label2" Content="Fecha de salida" HorizontalAlignment="Left" Margin="35,80,0,0" Grid.Row="2" VerticalAlignment="Top" Height="24" Width="118"/>
         <Label x:Name="label4" Content="Hora de despegue" HorizontalAlignment="Left" Margin="35,142,0,0" Grid.Row="2" VerticalAlignment="Top" Height="26" Width="118"/>

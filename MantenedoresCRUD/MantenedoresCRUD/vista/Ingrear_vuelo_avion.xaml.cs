@@ -23,9 +23,11 @@ namespace MantenedoresCRUD.vista
     public partial class Ingrear_vuelo_avion : Window
     {
         private NeAeronave neAeronave;
+        private NeVuelo neVuelo;
         private Aeronave aeronave;
         private DataSet ds;
-        public Ingrear_vuelo_avion()
+        private Ingresar_vuelo windowsVuelo = new Ingresar_vuelo();
+        public Ingrear_vuelo_avion(Ingresar_vuelo w)
         {
             InitializeComponent();
             neAeronave = new NeAeronave();
@@ -34,7 +36,8 @@ namespace MantenedoresCRUD.vista
             comboBoxTipoAeronave.DisplayMemberPath = "NOMBRE_TIPO";
             comboBoxTipoAeronave.SelectedValuePath = "NOMBRE_TIPO";
             comboBoxTipoAeronave.ItemsSource = ds.Tables["listaTipoAeronave"].DefaultView;
-
+            dataGridListaNave.SelectedValuePath = "Matricula";
+            windowsVuelo = w;
         }
 
         private void buttonCancel_Click(object sender, RoutedEventArgs e)
@@ -56,10 +59,6 @@ namespace MantenedoresCRUD.vista
             aeronave.TipoAeronave.NombreTipo = tipo;
             ds = neAeronave.getAeronave(aeronave);
             dataGridListaNave.ItemsSource = new DataView(ds.Tables["listaAeronaves"]);
-            listViewAeronave.DisplayMemberPath = "Matricula";
-            listViewAeronave.SelectedValuePath = "MATRICULA";
-            listViewAeronave.ItemsSource = new DataView(ds.Tables["listaAeronaves"]);
-            dataGrid.ItemsSource = new DataView(ds.Tables["listaAeronaves"]);
         }
 
         private void textBoxMatricula_TextChanged(object sender, TextChangedEventArgs e)
@@ -82,13 +81,35 @@ namespace MantenedoresCRUD.vista
             aeronave.TipoAeronave.NombreTipo = tipo;
             ds = neAeronave.getAeronave(aeronave);
             dataGridListaNave.ItemsSource = new DataView(ds.Tables["listaAeronaves"]);
+            
         }
 
         private void ChangeText(object sender, RoutedEventArgs e)
         {
-            dataGrid.SelectedValuePath = "Matricula";
-            labelPrueba.Content = dataGrid.SelectedValue;
+            aeronave = new Aeronave();
+           
+            DataRowView row = (DataRowView)dataGridListaNave.SelectedItems[0];
+
+            aeronave.Matricula= row["Matricula"].ToString();
+            aeronave.Marca = row["Marca"].ToString();
+            aeronave.TipoAeronave.NombreTipo = row["Tipo de aeronave"].ToString();
+            aeronave.VencimientoDgac = Convert.ToDateTime(row["Venc certificado DGAC"].ToString());
+            aeronave.Kmh = row["Velocidad Max"].ToString();
+            Sesion.SetValue("aeronave", aeronave);
+            neVuelo = new NeVuelo();
+            string hora = neVuelo.calcularHorasVuelo(aeronave,Sesion.GetValue<double>("kmDistancia"));
+            Sesion.SetValue("horatotalvisual", hora);
+            string horatotal = neVuelo.calcularHoraLLegada();
+            Sesion.SetValue("showHoraLlegada", horatotal);
+            Ingresar_Vuelo_Pilotos next = new Ingresar_Vuelo_Pilotos(this);
+            this.Hide();
+            next.ShowDialog();
         }
 
+        private void button_Click(object sender, RoutedEventArgs e)
+        {
+            this.Hide();
+            windowsVuelo.ShowDialog();
+        }
     }
 }

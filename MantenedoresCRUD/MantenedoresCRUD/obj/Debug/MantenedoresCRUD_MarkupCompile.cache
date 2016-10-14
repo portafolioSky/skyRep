@@ -10,11 +10,11 @@ none
 false
 DEBUG;TRACE
 C:\Users\Nacho_2\Desktop\MantenedoresCRUD\MantenedoresCRUD\App.xaml
-7-81011601
+11850232955
 
-29204040131
+39-1604936510
 16-1487359077
-MainWindow.xaml;vista\Ingrear_vuelo_avion.xaml;vista\Ingresar_vuelo.xaml;vista\Modulo_Administrador.xaml;vista\Modulo_Consultor.xaml;vista\Modulo_Operador.xaml;vista\Modulo_Piloto.xaml;
+MainWindow.xaml;vista\Ingrear_vuelo_avion.xaml;vista\Ingresar_vuelo.xaml;vista\Ingresar_Vuelo_Pilotos.xaml;vista\Modulo_Administrador.xaml;vista\Modulo_Consultor.xaml;vista\Modulo_Operador.xaml;vista\Modulo_Piloto.xaml;vista\Seleccion_Tripulacion.xaml;vista\VerLicencia.xaml;vista\Vuelo_Resumen.xaml;
 
 False
 

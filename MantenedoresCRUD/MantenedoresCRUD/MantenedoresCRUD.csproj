@@ -64,21 +64,30 @@
       <SubType>Designer</SubType>
     </ApplicationDefinition>
     <Compile Include="dao\AeronaveDao.cs" />
+    <Compile Include="dao\PilotoDao.cs" />
+    <Compile Include="dao\TripulacionDao.cs" />
     <Compile Include="dao\VueloDao.cs" />
     <Compile Include="modelo\Aeronave.cs" />
     <Compile Include="modelo\Ciudad.cs" />
     <Compile Include="modelo\Pais.cs" />
+    <Compile Include="modelo\LicenciaPiloto.cs" />
     <Compile Include="modelo\Region.cs" />
     <Compile Include="modelo\TipoAeronave.cs" />
+    <Compile Include="modelo\TipoLicencia.cs" />
     <Compile Include="modelo\Tripulacion.cs" />
     <Compile Include="modelo\Vuelo.cs" />
     <Compile Include="negocio\NeAeronave.cs" />
+    <Compile Include="negocio\NePiloto.cs" />
+    <Compile Include="negocio\NeTripulacion.cs" />
     <Compile Include="negocio\NeVuelo.cs" />
     <Compile Include="vista\Ingrear_vuelo_avion.xaml.cs">
       <DependentUpon>Ingrear_vuelo_avion.xaml</DependentUpon>
     </Compile>
     <Compile Include="vista\Ingresar_vuelo.xaml.cs">
       <DependentUpon>Ingresar_vuelo.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="vista\Ingresar_Vuelo_Pilotos.xaml.cs">
+      <DependentUpon>Ingresar_Vuelo_Pilotos.xaml</DependentUpon>
     </Compile>
     <Compile Include="vista\Modulo_Administrador.xaml.cs">
       <DependentUpon>Modulo_Administrador.xaml</DependentUpon>
@@ -92,7 +101,16 @@
     <Compile Include="vista\Modulo_Piloto.xaml.cs">
       <DependentUpon>Modulo_Piloto.xaml</DependentUpon>
     </Compile>
+    <Compile Include="vista\Seleccion_Tripulacion.xaml.cs">
+      <DependentUpon>Seleccion_Tripulacion.xaml</DependentUpon>
+    </Compile>
     <Compile Include="vista\Sesion.cs" />
+    <Compile Include="vista\VerLicencia.xaml.cs">
+      <DependentUpon>VerLicencia.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="vista\Vuelo_Resumen.xaml.cs">
+      <DependentUpon>Vuelo_Resumen.xaml</DependentUpon>
+    </Compile>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -116,6 +134,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="vista\Ingresar_Vuelo_Pilotos.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="vista\Modulo_Administrador.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -129,6 +151,18 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="vista\Modulo_Piloto.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="vista\Seleccion_Tripulacion.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="vista\VerLicencia.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="vista\Vuelo_Resumen.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

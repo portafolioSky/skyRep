@@ -17,7 +17,7 @@ namespace MantenedoresCRUD.modelo
         private DateTime vencimientoDgac;
         private string estadoAeronave;
         private TipoAeronave tipoAeronave;
-        private double kmh;
+        private string kmh;
 
         public string Matricula
         {
@@ -140,7 +140,7 @@ namespace MantenedoresCRUD.modelo
             }
         }
 
-        public double Kmh
+        public string Kmh
         {
             get
             {

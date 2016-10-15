@@ -178,13 +178,5 @@ namespace MantenedoresCRUD.negocio
 
         }
 
-
-        public void insertVuelo(Vuelo vuelo)
-        {
-            VueloDao vuelodao = new VueloDao();
-
-            vuelodao.ingresarVuelo(vuelo);
-        }
-
     }
 }

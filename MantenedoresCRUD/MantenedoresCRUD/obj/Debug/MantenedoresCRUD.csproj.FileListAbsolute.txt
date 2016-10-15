@@ -29,7 +29,36 @@ C:\Users\Nacho_2\Desktop\MantenedoresCRUD\MantenedoresCRUD\obj\Debug\vista\Ingre
 C:\Users\Nacho_2\Desktop\MantenedoresCRUD\MantenedoresCRUD\obj\Debug\vista\Ingresar_Vuelo_Pilotos.baml
 C:\Users\Nacho_2\Desktop\MantenedoresCRUD\MantenedoresCRUD\obj\Debug\vista\VerLicencia.g.cs
 C:\Users\Nacho_2\Desktop\MantenedoresCRUD\MantenedoresCRUD\obj\Debug\vista\VerLicencia.baml
-C:\Users\Nacho_2\Desktop\MantenedoresCRUD\MantenedoresCRUD\obj\Debug\vista\Seleccion_Tripulacion.g.cs
-C:\Users\Nacho_2\Desktop\MantenedoresCRUD\MantenedoresCRUD\obj\Debug\vista\Seleccion_Tripulacion.baml
-C:\Users\Nacho_2\Desktop\MantenedoresCRUD\MantenedoresCRUD\obj\Debug\vista\Vuelo_Resumen.g.cs
-C:\Users\Nacho_2\Desktop\MantenedoresCRUD\MantenedoresCRUD\obj\Debug\vista\Vuelo_Resumen.baml
+C:\Users\Asder\Documents\Visual Studio 2015\Projects\MantenedoresCRUD\MantenedoresCRUD\bin\Debug\MantenedoresCRUD.exe.config
+C:\Users\Asder\Documents\Visual Studio 2015\Projects\MantenedoresCRUD\MantenedoresCRUD\obj\Debug\MantenedoresCRUD.exe
+C:\Users\Asder\Documents\Visual Studio 2015\Projects\MantenedoresCRUD\MantenedoresCRUD\obj\Debug\MantenedoresCRUD.pdb
+C:\Users\Asder\Documents\Visual Studio 2015\Projects\MantenedoresCRUD\MantenedoresCRUD\bin\Debug\MantenedoresCRUD.exe
+C:\Users\Asder\Documents\Visual Studio 2015\Projects\MantenedoresCRUD\MantenedoresCRUD\bin\Debug\MantenedoresCRUD.pdb
+C:\Users\Asder\Documents\Visual Studio 2015\Projects\MantenedoresCRUD\MantenedoresCRUD\bin\Debug\Oracle.ManagedDataAccess.dll
+C:\Users\Asder\Documents\Visual Studio 2015\Projects\MantenedoresCRUD\MantenedoresCRUD\obj\Debug\MainWindow.g.cs
+C:\Users\Asder\Documents\Visual Studio 2015\Projects\MantenedoresCRUD\MantenedoresCRUD\obj\Debug\vista\Ingrear_vuelo_avion.g.cs
+C:\Users\Asder\Documents\Visual Studio 2015\Projects\MantenedoresCRUD\MantenedoresCRUD\obj\Debug\vista\Ingresar_vuelo.g.cs
+C:\Users\Asder\Documents\Visual Studio 2015\Projects\MantenedoresCRUD\MantenedoresCRUD\obj\Debug\vista\Ingresar_Vuelo_Pilotos.g.cs
+C:\Users\Asder\Documents\Visual Studio 2015\Projects\MantenedoresCRUD\MantenedoresCRUD\obj\Debug\vista\Modulo_Administrador.g.cs
+C:\Users\Asder\Documents\Visual Studio 2015\Projects\MantenedoresCRUD\MantenedoresCRUD\obj\Debug\vista\Modulo_Consultor.g.cs
+C:\Users\Asder\Documents\Visual Studio 2015\Projects\MantenedoresCRUD\MantenedoresCRUD\obj\Debug\vista\Modulo_Operador.g.cs
+C:\Users\Asder\Documents\Visual Studio 2015\Projects\MantenedoresCRUD\MantenedoresCRUD\obj\Debug\vista\Modulo_Piloto.g.cs
+C:\Users\Asder\Documents\Visual Studio 2015\Projects\MantenedoresCRUD\MantenedoresCRUD\obj\Debug\vista\VerLicencia.g.cs
+C:\Users\Asder\Documents\Visual Studio 2015\Projects\MantenedoresCRUD\MantenedoresCRUD\obj\Debug\App.g.cs
+C:\Users\Asder\Documents\Visual Studio 2015\Projects\MantenedoresCRUD\MantenedoresCRUD\obj\Debug\MantenedoresCRUD_MarkupCompile.cache
+C:\Users\Asder\Documents\Visual Studio 2015\Projects\MantenedoresCRUD\MantenedoresCRUD\obj\Debug\MantenedoresCRUD_MarkupCompile.lref
+C:\Users\Asder\Documents\Visual Studio 2015\Projects\MantenedoresCRUD\MantenedoresCRUD\obj\Debug\MainWindow.baml
+C:\Users\Asder\Documents\Visual Studio 2015\Projects\MantenedoresCRUD\MantenedoresCRUD\obj\Debug\vista\Ingrear_vuelo_avion.baml
+C:\Users\Asder\Documents\Visual Studio 2015\Projects\MantenedoresCRUD\MantenedoresCRUD\obj\Debug\vista\Ingresar_vuelo.baml
+C:\Users\Asder\Documents\Visual Studio 2015\Projects\MantenedoresCRUD\MantenedoresCRUD\obj\Debug\vista\Ingresar_Vuelo_Pilotos.baml
+C:\Users\Asder\Documents\Visual Studio 2015\Projects\MantenedoresCRUD\MantenedoresCRUD\obj\Debug\vista\Modulo_Administrador.baml
+C:\Users\Asder\Documents\Visual Studio 2015\Projects\MantenedoresCRUD\MantenedoresCRUD\obj\Debug\vista\Modulo_Consultor.baml
+C:\Users\Asder\Documents\Visual Studio 2015\Projects\MantenedoresCRUD\MantenedoresCRUD\obj\Debug\vista\Modulo_Operador.baml
+C:\Users\Asder\Documents\Visual Studio 2015\Projects\MantenedoresCRUD\MantenedoresCRUD\obj\Debug\vista\Modulo_Piloto.baml
+C:\Users\Asder\Documents\Visual Studio 2015\Projects\MantenedoresCRUD\MantenedoresCRUD\obj\Debug\vista\VerLicencia.baml
+C:\Users\Asder\Documents\Visual Studio 2015\Projects\MantenedoresCRUD\MantenedoresCRUD\obj\Debug\MantenedoresCRUD.g.resources
+C:\Users\Asder\Documents\Visual Studio 2015\Projects\MantenedoresCRUD\MantenedoresCRUD\obj\Debug\MantenedoresCRUD.Properties.Resources.resources
+C:\Users\Asder\Documents\Visual Studio 2015\Projects\MantenedoresCRUD\MantenedoresCRUD\obj\Debug\MantenedoresCRUD.csproj.GenerateResource.Cache
+C:\Users\Asder\Documents\Visual Studio 2015\Projects\MantenedoresCRUD\MantenedoresCRUD\obj\Debug\vista\Ingresar_aeronave.g.cs
+C:\Users\Asder\Documents\Visual Studio 2015\Projects\MantenedoresCRUD\MantenedoresCRUD\obj\Debug\vista\Ingresar_aeronave.baml
+C:\Users\Asder\Documents\Visual Studio 2015\Projects\MantenedoresCRUD\MantenedoresCRUD\obj\Debug\MantenedoresCRUD.csprojResolveAssemblyReference.cache

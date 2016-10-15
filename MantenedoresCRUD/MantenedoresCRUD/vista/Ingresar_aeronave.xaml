@@ -1,0 +1,43 @@
+﻿<Window x:Class="MantenedoresCRUD.vista.Ingresar_aeronave"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:MantenedoresCRUD.vista"
+        mc:Ignorable="d"
+        Title="Ingresar_aeronave" Height="284" Width="639.5" WindowStyle="None">
+    <Grid Background="#FF517E9C" Margin="0,0,2,0" Height="274" VerticalAlignment="Top">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="46*"/>
+            <RowDefinition Height="45*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="25*"/>
+            <ColumnDefinition Width="267*"/>
+        </Grid.ColumnDefinitions>
+        <Label x:Name="labelTitulo" Content="Ingresar aeronave" HorizontalAlignment="Left" Margin="10,5,0,0" VerticalAlignment="Top" FontSize="16" FontWeight="Medium" Foreground="White" Grid.ColumnSpan="2"/>
+        <Rectangle Fill="#FFF5F5FF" HorizontalAlignment="Left" Height="223" Margin="10,41,0,0" Stroke="White" VerticalAlignment="Top" Width="606" Grid.ColumnSpan="2" MouseLeftButtonDown="Rectangle_MouseLeftButtonDown" Grid.RowSpan="2"/>
+        <Button x:Name="buttonCerrar" Content="X" HorizontalAlignment="Left" Margin="529,10,0,0" VerticalAlignment="Top" Width="32" Height="26" Click="buttonCerrar_Click" Background="#FF294A61" FontWeight="Bold" Foreground="White" BorderBrush="{x:Null}" Grid.Column="1"/>
+        <GroupBox x:Name="groupBoxDatos" Header="Datos" HorizontalAlignment="Left" Margin="22,57,0,0" VerticalAlignment="Top" Grid.ColumnSpan="2" Height="177" Grid.RowSpan="2" Width="288"/>
+        <Label x:Name="labelTipo" Content="Tipo" HorizontalAlignment="Left" Margin="31,76,0,0" VerticalAlignment="Top" Grid.ColumnSpan="2"/>
+        <RadioButton x:Name="radioButtonAvion" Content="Avion" Grid.Column="1" HorizontalAlignment="Left" Margin="46,82,0,0" VerticalAlignment="Top"/>
+        <RadioButton x:Name="radioButtonHelicoptero" Content="Helicoptero" Grid.Column="1" HorizontalAlignment="Left" Margin="114,82,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="labelMatricula" Content="Matricula" HorizontalAlignment="Left" Margin="31,102,0,0" VerticalAlignment="Top" Grid.ColumnSpan="2"/>
+        <TextBox x:Name="textBoxMatricula" Grid.Column="1" HorizontalAlignment="Left" Height="23" Margin="100,105,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
+        <Label x:Name="labelMarca" Content="Marca" HorizontalAlignment="Left" Margin="31,133,0,0" VerticalAlignment="Top" Grid.ColumnSpan="2" Height="31" Grid.RowSpan="2"/>
+        <Label x:Name="labelCertificado" Content="Certificado DGAC" HorizontalAlignment="Left" Margin="31,164,0,0" VerticalAlignment="Top" Grid.ColumnSpan="2" Grid.RowSpan="2"/>
+        <DatePicker x:Name="fechaCertificado" Grid.Column="1" Margin="100,27,356,0" VerticalAlignment="Top" Grid.Row="1"/>
+        <Label x:Name="labelVencimiento" Content="Vencimiento DGAC" HorizontalAlignment="Left" Margin="31,56,0,0" Grid.Row="1" VerticalAlignment="Top" Grid.ColumnSpan="2"/>
+        <DatePicker x:Name="fechaVencimiento" Grid.Column="1" HorizontalAlignment="Left" Margin="100,56,0,0" Grid.Row="1" VerticalAlignment="Top" Width="120"/>
+        <GroupBox x:Name="groupBoxComponentes" Grid.Column="1" Header="Componentes" HorizontalAlignment="Left" Margin="271,57,0,0" VerticalAlignment="Top" Height="177" Grid.RowSpan="2" Width="268"/>
+        <Button x:Name="buttonAgregarComponente" Content="Agregar" Grid.Column="1" HorizontalAlignment="Left" Margin="278,76,0,0" VerticalAlignment="Top" Width="75" Foreground="White">
+            <Button.Background>
+                <SolidColorBrush Color="#FF8BABB9" Opacity="0.7"/>
+            </Button.Background>
+        </Button>
+        <DataGrid x:Name="dataGridComponentes" Grid.Column="1" HorizontalAlignment="Left" Margin="278,105,0,0" VerticalAlignment="Top" Height="123" Grid.RowSpan="2" Width="255"/>
+        <TextBox x:Name="textBoxMarca" Grid.Column="1" HorizontalAlignment="Left" Height="23" Margin="100,133,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" Grid.RowSpan="2"/>
+        <Button x:Name="btnIngresar" Content="Ingresar" HorizontalAlignment="Left" Margin="22,100,0,0" Grid.Row="1" VerticalAlignment="Top" Width="75" Grid.ColumnSpan="2" Click="btnIngresar_Click"/>
+
+    </Grid>
+</Window>

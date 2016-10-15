@@ -57,5 +57,42 @@ namespace MantenedoresCRUD.dao
             conn.Close();
             return data;
         }
+
+        public DataSet listarTodosPilotos(string tipo, string rut, string nombre)
+        {
+            DataSet ds = new DataSet();
+            if (conn.Open())
+            {
+                OracleCommand oraCmd = new OracleCommand(conn.getUsuario() + "PILOTO_SELECT_ALL", conn.Cnn);
+                oraCmd.BindByName = true;
+                oraCmd.CommandType = CommandType.StoredProcedure;
+                oraCmd.Parameters.Add("rut_var", OracleDbType.Varchar2, rut, ParameterDirection.Input);
+                oraCmd.Parameters.Add("tipo_var", OracleDbType.Varchar2, tipo, ParameterDirection.Input);
+                oraCmd.Parameters.Add("nombre_var", OracleDbType.Varchar2, nombre, ParameterDirection.Input);
+                oraCmd.Parameters.Add("p_recordset", OracleDbType.RefCursor, ParameterDirection.Output);
+                oraCmd.ExecuteNonQuery();
+                OracleDataAdapter ad = new OracleDataAdapter(oraCmd);
+                ad.Fill(ds, "listaPilotos", (OracleRefCursor)(oraCmd.Parameters["p_recordset"].Value));
+                conn.Close();
+            }
+            return ds;
+        }
+
+        public DataSet listarTipoPiloto()
+        {
+            DataSet ds = new DataSet();
+            if (conn.Open())
+            {
+                OracleCommand oraCmd = new OracleCommand(conn.getUsuario() + "PILOTO_TIPO_SELECT", conn.Cnn);
+                oraCmd.BindByName = true;
+                oraCmd.CommandType = CommandType.StoredProcedure;
+                oraCmd.Parameters.Add("p_recordset", OracleDbType.RefCursor, ParameterDirection.Output);
+                oraCmd.ExecuteNonQuery();
+                OracleDataAdapter ad = new OracleDataAdapter(oraCmd);
+                ad.Fill(ds, "listaTipoPiloto", (OracleRefCursor)(oraCmd.Parameters["p_recordset"].Value));
+                conn.Close();
+            }
+            return ds;
+        }
     }
 }

@@ -17,8 +17,8 @@ namespace MantenedoresCRUD.dataBase
 
         private Data()
         {
-            user = "portafolio";
-            pass = "portafolio";
+            user = "sescuela";
+            pass = "asder";
             stringCnn = string.Format(@"DATA SOURCE=localhost:1521/XE;USER ID={0}; PASSWORD={1};", user, pass);
             cnn = new OracleConnection(stringCnn);
         }

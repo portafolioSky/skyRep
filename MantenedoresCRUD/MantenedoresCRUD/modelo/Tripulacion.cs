@@ -6,15 +6,13 @@ using System.Threading.Tasks;
 
 namespace MantenedoresCRUD.modelo
 {
-    public class Tripulacion
+    class Tripulacion
     {
-        private double cantidadHoras;
-        private string rutPiloto;
-        private string tipoLicencia;
-        private string nombre;
+        private int cantidadHoras;
+        private Usuario rutPiloto;
         private String puestoVuelo;
 
-        public double CantidadHoras
+        public int CantidadHoras
         {
             get
             {
@@ -27,7 +25,7 @@ namespace MantenedoresCRUD.modelo
             }
         }
 
-        public string RutPiloto
+        public Usuario RutPiloto
         {
             get
             {
@@ -53,30 +51,11 @@ namespace MantenedoresCRUD.modelo
             }
         }
 
-        public string Nombre
+        public Tripulacion(int cantidadHoras, Usuario rutPiloto, string puestoVuelo)
         {
-            get
-            {
-                return nombre;
-            }
-
-            set
-            {
-                nombre = value;
-            }
-        }
-
-        public string TipoLicencia
-        {
-            get
-            {
-                return tipoLicencia;
-            }
-
-            set
-            {
-                tipoLicencia = value;
-            }
+            this.cantidadHoras = cantidadHoras;
+            this.rutPiloto = rutPiloto;
+            this.puestoVuelo = puestoVuelo;
         }
     }
 }

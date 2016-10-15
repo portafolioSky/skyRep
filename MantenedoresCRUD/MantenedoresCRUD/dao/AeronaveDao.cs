@@ -39,6 +39,25 @@ namespace MantenedoresCRUD.dao
             return ds;
         }
 
+        public DataSet ListarTodasAeronaves(Aeronave aeronave)
+        {
+            DataSet ds = new DataSet();
+            if (conn.Open())
+            {
+                OracleCommand oraCmd = new OracleCommand(conn.getUsuario() + "AERONAVE_SELECT_ALL", conn.Cnn);
+                oraCmd.BindByName = true;
+                oraCmd.CommandType = CommandType.StoredProcedure;
+                oraCmd.Parameters.Add("tipo_aeronave_var", OracleDbType.Varchar2, aeronave.TipoAeronave.NombreTipo, ParameterDirection.Input);
+                oraCmd.Parameters.Add("matricula_var", OracleDbType.Varchar2, aeronave.Matricula, ParameterDirection.Input);
+                oraCmd.Parameters.Add("p_recordset", OracleDbType.RefCursor, ParameterDirection.Output);
+                oraCmd.ExecuteNonQuery();
+                OracleDataAdapter ad = new OracleDataAdapter(oraCmd);
+                ad.Fill(ds, "listaAeronaves", (OracleRefCursor)(oraCmd.Parameters["p_recordset"].Value));
+                conn.Close();
+            }
+            return ds;   
+        }
+
         public DataSet ListarTipoAeronave()
         {
             DataSet ds = new DataSet();
@@ -55,5 +74,7 @@ namespace MantenedoresCRUD.dao
             }
             return ds;
         }
+
+
     }
 }

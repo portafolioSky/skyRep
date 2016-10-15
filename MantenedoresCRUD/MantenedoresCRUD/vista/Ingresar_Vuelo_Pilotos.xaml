@@ -28,7 +28,7 @@
         <Label x:Name="labelHorasDespegue"  HorizontalAlignment="Left" Margin="370,133,0,0" Grid.Row="3" VerticalAlignment="Top" FontWeight="Medium" Foreground="#FF7D84CB"/>
         <Label x:Name="labelHoraArribo"  HorizontalAlignment="Left" Margin="370,200,0,0" Grid.Row="3" VerticalAlignment="Top" FontWeight="Medium" Foreground="#FF7D84CB"/>
         <GroupBox x:Name="groupBox1" Header="Seleccionar piloto" HorizontalAlignment="Left" Margin="27,4,0,0" Grid.Row="2" VerticalAlignment="Top" Height="419" Width="475" Grid.RowSpan="2"/>
-        <DataGrid x:Name="dgListaPilotdos" HorizontalAlignment="Left" Margin="36,15,0,0" Grid.Row="3" VerticalAlignment="Top" Height="393" Width="459" Background="#FFA5CBCF" BorderBrush="#FF101F64" RowBackground="#FFD6ECF0" IsReadOnly="True" SelectionChanged="dgListaPilotdos_SelectionChanged">
+        <DataGrid x:Name="dgListaPilotdos" HorizontalAlignment="Left" Margin="36,15,0,0" Grid.Row="3" VerticalAlignment="Top" Height="393" Width="459" Background="#FFA5CBCF" BorderBrush="#FF101F64" RowBackground="#FFD6ECF0" IsReadOnly="True">
             <DataGrid.Columns>
                 <DataGridTemplateColumn Header="Seleccion">
                     <DataGridTemplateColumn.CellTemplate>
@@ -44,10 +44,12 @@
         <TextBox x:Name="textBoxRut" HorizontalAlignment="Left" Height="22" Margin="610,56,0,0" Grid.Row="3" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" TextChanged="textBoxRut_TextChanged"/>
         <TextBox x:Name="textBoxPiloto" HorizontalAlignment="Left" Height="23" Margin="610,92,0,0" Grid.Row="3" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" TextChanged="textBoxPiloto_TextChanged"/>
         <Button x:Name="buttonVerLicencia" Content="Ver Licencias" HorizontalAlignment="Left" Margin="619,148,0,0" Grid.Row="3" VerticalAlignment="Top" Width="75" Click="buttonVerLicencia_Click"/>
+        <ComboBox x:Name="comboBoxPuesto" HorizontalAlignment="Left" Margin="619,179,0,0" Grid.Row="3" VerticalAlignment="Top" Width="111"/>
         <Label x:Name="label2" Content="Rut:" HorizontalAlignment="Left" Margin="576,52,0,0" Grid.Row="3" VerticalAlignment="Top" FontWeight="Light"/>
         <Label x:Name="label3" Content="Nombre:" HorizontalAlignment="Left" Margin="550,89,0,0" Grid.Row="3" VerticalAlignment="Top" FontWeight="Light"/>
         <Label x:Name="label4" Content="Tipo de piloto:" HorizontalAlignment="Left" Margin="522,11,0,0" Grid.Row="3" VerticalAlignment="Top" FontWeight="Light"/>
-        <Label x:Name="label5" Content="Puesto:" HorizontalAlignment="Left" Margin="523,164,0,0" Grid.Row="3" VerticalAlignment="Top" FontWeight="Light"/>
+        <Label x:Name="label5" Content="Responsabilidad:" HorizontalAlignment="Left" Margin="525,175,0,0" Grid.Row="3" VerticalAlignment="Top" FontWeight="Light"/>
+        <Button x:Name="buttonAceptar" Content="Aceptar" HorizontalAlignment="Left" Margin="619,210,0,0" Grid.Row="3" VerticalAlignment="Top" Width="75"/>
         <Label x:Name="label6" Content="Nave:" HorizontalAlignment="Left" Margin="564,276,0,0" Grid.Row="3" VerticalAlignment="Top" FontWeight="Thin" FontSize="10.667"/>
         <Label x:Name="label7" Content="Fecha de partida:" HorizontalAlignment="Left" Margin="517,317,0,0" Grid.Row="3" VerticalAlignment="Top" FontWeight="Thin" FontSize="10.667"/>
         <Label x:Name="label8" Content="Orgine/Destino:" HorizontalAlignment="Left" Margin="523,360,0,0" Grid.Row="3" VerticalAlignment="Top" FontWeight="Thin" FontSize="10.667"/>
@@ -55,7 +57,7 @@
         <Label x:Name="label10" Content="Fecha de llegada:" HorizontalAlignment="Left" Margin="516,339,0,0" Grid.Row="3" VerticalAlignment="Top" FontWeight="Thin" FontSize="10.667"/>
         <Label x:Name="label11" Content="Tipo de vuelo:" HorizontalAlignment="Left" Margin="526,296,0,0" Grid.Row="3" VerticalAlignment="Top" FontWeight="Thin" FontSize="10.667"/>
         <GridSplitter x:Name="gridSplitter" HorizontalAlignment="Left" Height="144" Margin="604,267,0,0" Grid.Row="3" VerticalAlignment="Top" Width="5"/>
-        <Button x:Name="buttonFinalizar" Content="Finalizar &gt;" HorizontalAlignment="Left" Margin="626,480,0,0" Grid.Row="3" VerticalAlignment="Top" Width="80" Click="buttonFinalizar_Click"/>
+        <Button x:Name="buttonFinalizar" Content="Finalizar &gt;" HorizontalAlignment="Left" Margin="626,480,0,0" Grid.Row="3" VerticalAlignment="Top" Width="80"/>
         <Label x:Name="labelTipoVuelo" Content="Label" HorizontalAlignment="Left" Margin="610,296,0,0" Grid.Row="3" VerticalAlignment="Top" FontSize="10.667" FontWeight="Thin" Width="120"/>
         <Label x:Name="labelOrigenDestino" Content="Label" HorizontalAlignment="Left" Margin="610,360,0,0" Grid.Row="3" VerticalAlignment="Top" FontSize="10.667" FontWeight="Thin" Width="120"/>
         <Label x:Name="labelFechaPartida" Content="Label" HorizontalAlignment="Left" Margin="609,317,0,0" Grid.Row="3" VerticalAlignment="Top" FontSize="10.667" FontWeight="Thin" Width="121"/>
@@ -63,9 +65,5 @@
         <Label x:Name="labelNave" Content="Label" HorizontalAlignment="Left" Margin="609,276,0,0" Grid.Row="3" VerticalAlignment="Top" FontSize="10.667" FontWeight="Thin" Width="121"/>
         <Label x:Name="labelDistancia" Content="Label" HorizontalAlignment="Left" Margin="610,384,0,0" Grid.Row="3" VerticalAlignment="Top" FontSize="10.667" FontWeight="Thin" Width="116"/>
         <GroupBox x:Name="groupBox3" Header="Información" HorizontalAlignment="Left" Margin="517,256,0,0" Grid.Row="3" VerticalAlignment="Top" Height="158" Width="221"/>
-        <RadioButton x:Name="radioPiloto" Content="Piloto:" HorizontalAlignment="Left" Margin="550,187,0,0" Grid.Row="3" VerticalAlignment="Top"/>
-        <RadioButton x:Name="radioCopiloto" Content="Copiloto:" HorizontalAlignment="Left" Margin="550,208,0,0" Grid.Row="3" VerticalAlignment="Top"/>
-        <Label x:Name="LabePiloto" Content="" HorizontalAlignment="Left" Margin="619,182,0,0" Grid.Row="3" VerticalAlignment="Top" Width="114"/>
-        <Label x:Name="LabelCopi" Content="" HorizontalAlignment="Left" Margin="619,203,0,0" Grid.Row="3" VerticalAlignment="Top" Width="111"/>
     </Grid>
 </Window>

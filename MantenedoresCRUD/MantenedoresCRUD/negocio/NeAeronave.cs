@@ -28,7 +28,9 @@ namespace MantenedoresCRUD.negocio
             if (tipo.Equals("")) nave.TipoAeronave.NombreTipo = "%";
             else nave.TipoAeronave.NombreTipo = tipo+"%";
             AeronaveDao aeronave = new AeronaveDao();
-            return aeronave.ListarAeronaves(nave);
+            return aeronave.ListarTodasAeronaves(nave);
         }
+
+
     }
 }

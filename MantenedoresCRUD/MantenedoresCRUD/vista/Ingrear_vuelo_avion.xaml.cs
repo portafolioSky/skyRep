@@ -98,7 +98,6 @@ namespace MantenedoresCRUD.vista
             Sesion.SetValue("aeronave", aeronave);
             neVuelo = new NeVuelo();
             string hora = neVuelo.calcularHorasVuelo(aeronave,Sesion.GetValue<double>("kmDistancia"));
-            Sesion.SetValue("horatotalvisual", hora);
             string horatotal = neVuelo.calcularHoraLLegada();
             Sesion.SetValue("showHoraLlegada", horatotal);
             Ingresar_Vuelo_Pilotos next = new Ingresar_Vuelo_Pilotos(this);

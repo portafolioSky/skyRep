@@ -91,28 +91,7 @@ namespace MantenedoresCRUD.dao
             }
                 conn.Close();
 
-        }
-
-        public void ingresarVuelo (Vuelo vuelo)
-        {
-            conn.Open();
-  
-            OracleCommand ora_cmd = new OracleCommand(conn.getUsuario() + "VUELO_INGRESAR", conn.Cnn);
-            ora_cmd.BindByName = true;
-            ora_cmd.CommandType = CommandType.StoredProcedure;
-
-             ora_cmd.Parameters.Add("var_fechaSalida", OracleDbType.Date, vuelo.FechaSalida, ParameterDirection.Input);
-             ora_cmd.Parameters.Add("var_fechaArribo", OracleDbType.Date, vuelo.FechaArribo, ParameterDirection.Input);
-             ora_cmd.Parameters.Add("var_tiempoTotal", OracleDbType.Double, vuelo.TotalTiempo, ParameterDirection.Input);
-             ora_cmd.Parameters.Add("var_idCondicion", OracleDbType.Int16, vuelo.IdCondicionVuelo, ParameterDirection.Input);
-             ora_cmd.Parameters.Add("var_matriculaAeronave", OracleDbType.Varchar2, vuelo.MatriculaAeronave, ParameterDirection.Input);
-             ora_cmd.Parameters.Add("var_idOrigen", OracleDbType.Int16, vuelo.CiudadOrigen, ParameterDirection.Input);
-             ora_cmd.Parameters.Add("var_idDestino", OracleDbType.Int16, vuelo.CiudadDestino, ParameterDirection.Input);
-             ora_cmd.Parameters.Add("var_estado", OracleDbType.Varchar2, vuelo.Estado, ParameterDirection.Input);
-             ora_cmd.Parameters.Add("var_kilometros", OracleDbType.Varchar2, vuelo.Kilometros, ParameterDirection.Input);
-             ora_cmd.ExecuteNonQuery();
-             conn.Close();
-
+            conn.Close();
         }
 
     }

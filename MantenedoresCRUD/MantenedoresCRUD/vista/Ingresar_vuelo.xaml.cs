@@ -114,14 +114,12 @@ namespace MantenedoresCRUD.vista
 
                         ciudadOrigen = new Ciudad();
                         ciudadDestino = new Ciudad();
-                        ciudadOrigen.IdCiudad = Convert.ToInt16(comboBoxOrigen.SelectedValue.ToString());
-                        ciudadDestino.IdCiudad = Convert.ToInt16(comboBoxDestino.SelectedValue.ToString());
+                        ciudadOrigen.IdCiudad = Convert.ToInt32(comboBoxOrigen.SelectedValue.ToString());
+                        ciudadDestino.IdCiudad = Convert.ToInt32(comboBoxDestino.SelectedValue.ToString());
                         string origen = comboBoxOrigen.Text;
                         string destino = comboBoxDestino.Text;
                         Sesion.SetValue("origen", origen);
                         Sesion.SetValue("destino", destino);
-                        Sesion.SetValue("idOrigen", ciudadOrigen.IdCiudad);
-                        Sesion.SetValue("idDestino", ciudadDestino.IdCiudad);
                         double kmDistancia = new double();
                         kmDistancia = neVueloGetCiudad.getDintancia(ciudadOrigen, ciudadDestino);
                         Sesion.SetValue("kmDistancia", kmDistancia);

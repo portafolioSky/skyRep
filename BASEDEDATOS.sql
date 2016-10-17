@@ -1,5 +1,5 @@
 --------------------------------------------------------
--- Archivo creado  - sábado-octubre-15-2016   
+-- Archivo creado  - lunes-octubre-17-2016   
 --------------------------------------------------------
 --------------------------------------------------------
 --  DDL for Sequence CIUDAD_SEQ
@@ -25,7 +25,7 @@
 --  DDL for Sequence LICENCIA_SEQ
 --------------------------------------------------------
 
-   CREATE SEQUENCE  "LICENCIA_SEQ"  MINVALUE 1 MAXVALUE 9999999999999999999999999999 INCREMENT BY 1 START WITH 41 CACHE 20 NOORDER  NOCYCLE ;
+   CREATE SEQUENCE  "LICENCIA_SEQ"  MINVALUE 1 MAXVALUE 9999999999999999999999999999 INCREMENT BY 1 START WITH 61 CACHE 20 NOORDER  NOCYCLE ;
 --------------------------------------------------------
 --  DDL for Sequence MANTENIMIENTO_AERONAVE_SEQ
 --------------------------------------------------------
@@ -366,18 +366,18 @@ Insert into CONDICION_VUELO (ID_CONDICION,NOMBRE_CONDICION,DESCRIPCION) values (
 Insert into CONDICION_VUELO (ID_CONDICION,NOMBRE_CONDICION,DESCRIPCION) values ('2','VFR','De tipo visual');
 REM INSERTING into LICENCIA
 SET DEFINE OFF;
-Insert into LICENCIA (ID_LICENCIA,FECHA_EMISION,FECHA_EXPIRACION,ESTADO_VIGENCIA,PERSONA_RUT,ID_TIPO_LICENCIA) values ('1',to_date('12/09/15','DD/MM/RR'),to_date('12/09/17','DD/MM/RR'),'t','16533989-4','3');
+Insert into LICENCIA (ID_LICENCIA,FECHA_EMISION,FECHA_EXPIRACION,ESTADO_VIGENCIA,PERSONA_RUT,ID_TIPO_LICENCIA) values ('1',to_date('12/09/15','DD/MM/RR'),to_date('12/09/17','DD/MM/RR'),'t','16533989-4','2');
 Insert into LICENCIA (ID_LICENCIA,FECHA_EMISION,FECHA_EXPIRACION,ESTADO_VIGENCIA,PERSONA_RUT,ID_TIPO_LICENCIA) values ('2',to_date('08/04/15','DD/MM/RR'),to_date('08/04/17','DD/MM/RR'),'t','17594659-4','3');
 Insert into LICENCIA (ID_LICENCIA,FECHA_EMISION,FECHA_EXPIRACION,ESTADO_VIGENCIA,PERSONA_RUT,ID_TIPO_LICENCIA) values ('3',to_date('20/04/16','DD/MM/RR'),to_date('20/04/18','DD/MM/RR'),'t','17594659-4','2');
 Insert into LICENCIA (ID_LICENCIA,FECHA_EMISION,FECHA_EXPIRACION,ESTADO_VIGENCIA,PERSONA_RUT,ID_TIPO_LICENCIA) values ('4',to_date('05/12/16','DD/MM/RR'),to_date('05/12/18','DD/MM/RR'),'t','9557510-2','3');
 Insert into LICENCIA (ID_LICENCIA,FECHA_EMISION,FECHA_EXPIRACION,ESTADO_VIGENCIA,PERSONA_RUT,ID_TIPO_LICENCIA) values ('5',to_date('22/01/16','DD/MM/RR'),to_date('22/01/18','DD/MM/RR'),'t','17911818-1','3');
 Insert into LICENCIA (ID_LICENCIA,FECHA_EMISION,FECHA_EXPIRACION,ESTADO_VIGENCIA,PERSONA_RUT,ID_TIPO_LICENCIA) values ('6',to_date('21/08/12','DD/MM/RR'),to_date('21/08/14','DD/MM/RR'),'f','19206741-3','3');
 Insert into LICENCIA (ID_LICENCIA,FECHA_EMISION,FECHA_EXPIRACION,ESTADO_VIGENCIA,PERSONA_RUT,ID_TIPO_LICENCIA) values ('7',to_date('14/07/15','DD/MM/RR'),to_date('14/07/17','DD/MM/RR'),'t','18751869-5','2');
-Insert into LICENCIA (ID_LICENCIA,FECHA_EMISION,FECHA_EXPIRACION,ESTADO_VIGENCIA,PERSONA_RUT,ID_TIPO_LICENCIA) values ('8',to_date('02/04/15','DD/MM/RR'),to_date('02/04/15','DD/MM/RR'),'t','17899579-0','2');
+Insert into LICENCIA (ID_LICENCIA,FECHA_EMISION,FECHA_EXPIRACION,ESTADO_VIGENCIA,PERSONA_RUT,ID_TIPO_LICENCIA) values ('8',to_date('17/10/16','DD/MM/RR'),to_date('17/10/17','DD/MM/RR'),'t','17899579-0','2');
 Insert into LICENCIA (ID_LICENCIA,FECHA_EMISION,FECHA_EXPIRACION,ESTADO_VIGENCIA,PERSONA_RUT,ID_TIPO_LICENCIA) values ('9',to_date('17/10/16','DD/MM/RR'),to_date('17/10/18','DD/MM/RR'),'t','18691926-2','2');
 Insert into LICENCIA (ID_LICENCIA,FECHA_EMISION,FECHA_EXPIRACION,ESTADO_VIGENCIA,PERSONA_RUT,ID_TIPO_LICENCIA) values ('10',to_date('15/02/10','DD/MM/RR'),to_date('21/12/16','DD/MM/RR'),'t','13828801-3','2');
 Insert into LICENCIA (ID_LICENCIA,FECHA_EMISION,FECHA_EXPIRACION,ESTADO_VIGENCIA,PERSONA_RUT,ID_TIPO_LICENCIA) values ('11',to_date('09/08/15','DD/MM/RR'),to_date('09/08/17','DD/MM/RR'),'t','19609576-4','2');
-Insert into LICENCIA (ID_LICENCIA,FECHA_EMISION,FECHA_EXPIRACION,ESTADO_VIGENCIA,PERSONA_RUT,ID_TIPO_LICENCIA) values ('12',to_date('18/06/13','DD/MM/RR'),to_date('18/06/15','DD/MM/RR'),'f','15405899-0','2');
+Insert into LICENCIA (ID_LICENCIA,FECHA_EMISION,FECHA_EXPIRACION,ESTADO_VIGENCIA,PERSONA_RUT,ID_TIPO_LICENCIA) values ('41',to_date('17/10/16','DD/MM/RR'),to_date('17/10/17','DD/MM/RR'),'t','15405899-0','3');
 Insert into LICENCIA (ID_LICENCIA,FECHA_EMISION,FECHA_EXPIRACION,ESTADO_VIGENCIA,PERSONA_RUT,ID_TIPO_LICENCIA) values ('21',to_date('12/09/15','DD/MM/RR'),to_date('12/09/17','DD/MM/RR'),'t','16533989-4','2');
 Insert into LICENCIA (ID_LICENCIA,FECHA_EMISION,FECHA_EXPIRACION,ESTADO_VIGENCIA,PERSONA_RUT,ID_TIPO_LICENCIA) values ('22',to_date('12/09/15','DD/MM/RR'),to_date('12/09/17','DD/MM/RR'),'t','19609576-4','3');
 REM INSERTING into MANTENIMIENTO_AERONAVE
@@ -439,11 +439,11 @@ SET DEFINE OFF;
 Insert into USUARIO (RUT,NOMBRE,AP_PATERNO,AP_MATERENO,USUARIO,PASS,CORREO,ROL_ID_ROL,FECHA_MEDICINA_AEROESPACIAL,ESTADO) values ('18027668-8','jose','zuñiga','tapia','jzuniga','prueba','jzuniga@gmail.com','1',null,'ACTIVO');
 Insert into USUARIO (RUT,NOMBRE,AP_PATERNO,AP_MATERENO,USUARIO,PASS,CORREO,ROL_ID_ROL,FECHA_MEDICINA_AEROESPACIAL,ESTADO) values ('17912001-1','Mauricio','Andrade','Arteaga','mandrade','mandrade','m.andrade@vuelos.com','2',null,'ACTIVO');
 Insert into USUARIO (RUT,NOMBRE,AP_PATERNO,AP_MATERENO,USUARIO,PASS,CORREO,ROL_ID_ROL,FECHA_MEDICINA_AEROESPACIAL,ESTADO) values ('18691660-3','Cesar','Barrientos','Chiguay','cbarrientos','cbarrientos','c.barrientos@vuelos.com','2',null,'ACTIVO');
-Insert into USUARIO (RUT,NOMBRE,AP_PATERNO,AP_MATERENO,USUARIO,PASS,CORREO,ROL_ID_ROL,FECHA_MEDICINA_AEROESPACIAL,ESTADO) values ('16533989-4','Mario','Retamal','Paredes','mretamal','mretamal','mretamal@vuelos.com','3',null,'DESACTIVADO');
-Insert into USUARIO (RUT,NOMBRE,AP_PATERNO,AP_MATERENO,USUARIO,PASS,CORREO,ROL_ID_ROL,FECHA_MEDICINA_AEROESPACIAL,ESTADO) values ('17594659-4','Julio','Avendaño','Quezada','javendaño','javendaño','javendaño@vuelos.com','3',null,'DESACTIVADO');
-Insert into USUARIO (RUT,NOMBRE,AP_PATERNO,AP_MATERENO,USUARIO,PASS,CORREO,ROL_ID_ROL,FECHA_MEDICINA_AEROESPACIAL,ESTADO) values ('9557510-2','Benito','Gomez','Mansilla','bgomez','bgomez','bgomez@vuelos.com','3',null,'DESACTIVADO');
+Insert into USUARIO (RUT,NOMBRE,AP_PATERNO,AP_MATERENO,USUARIO,PASS,CORREO,ROL_ID_ROL,FECHA_MEDICINA_AEROESPACIAL,ESTADO) values ('16533989-4','Mario','Retamal','Paredes','mretamal','mretamal','mretamal@vuelos.com','3',to_date('18/10/16','DD/MM/RR'),'ACTIVO');
+Insert into USUARIO (RUT,NOMBRE,AP_PATERNO,AP_MATERENO,USUARIO,PASS,CORREO,ROL_ID_ROL,FECHA_MEDICINA_AEROESPACIAL,ESTADO) values ('17594659-4','Julio','Avendaño','Quezada','javendaño','javendaño','javendaño@vuelos.com','3',null,'ACTIVO');
+Insert into USUARIO (RUT,NOMBRE,AP_PATERNO,AP_MATERENO,USUARIO,PASS,CORREO,ROL_ID_ROL,FECHA_MEDICINA_AEROESPACIAL,ESTADO) values ('9557510-2','Benito','Gomez','Mansilla','bgomez','bgomez','bgomez@vuelos.com','3',null,'ACTIVO');
 Insert into USUARIO (RUT,NOMBRE,AP_PATERNO,AP_MATERENO,USUARIO,PASS,CORREO,ROL_ID_ROL,FECHA_MEDICINA_AEROESPACIAL,ESTADO) values ('17911818-1','Susana','Muñoz','Contreras','scontreras','scontreras','scontreras@vuelos.com','3',to_date('02/12/16','DD/MM/RR'),'ACTIVO');
-Insert into USUARIO (RUT,NOMBRE,AP_PATERNO,AP_MATERENO,USUARIO,PASS,CORREO,ROL_ID_ROL,FECHA_MEDICINA_AEROESPACIAL,ESTADO) values ('19206741-3','Maria','Cardenas','Lepio','mcardenas','mcardenas','mcardenas@vuelos.com','3',to_date('02/12/16','DD/MM/RR'),'ACTIVO');
+Insert into USUARIO (RUT,NOMBRE,AP_PATERNO,AP_MATERENO,USUARIO,PASS,CORREO,ROL_ID_ROL,FECHA_MEDICINA_AEROESPACIAL,ESTADO) values ('19206741-3','Maria','Cardenas','Lepio','mcardenas','mcardenas','mcardenas@vuelos.com','3',null,'DESACTIVADO');
 Insert into USUARIO (RUT,NOMBRE,AP_PATERNO,AP_MATERENO,USUARIO,PASS,CORREO,ROL_ID_ROL,FECHA_MEDICINA_AEROESPACIAL,ESTADO) values ('18751869-5','Diego','Barrios','Perez','dbarrios','dbarrios','dbarrios@vuelos.com','3',to_date('02/12/16','DD/MM/RR'),'ACTIVO');
 Insert into USUARIO (RUT,NOMBRE,AP_PATERNO,AP_MATERENO,USUARIO,PASS,CORREO,ROL_ID_ROL,FECHA_MEDICINA_AEROESPACIAL,ESTADO) values ('17899579-0','Jhon','Espinoza','Pereira','jpereira','jpereira','jpereira@vuelos.com','3',to_date('02/12/16','DD/MM/RR'),'ACTIVO');
 Insert into USUARIO (RUT,NOMBRE,AP_PATERNO,AP_MATERENO,USUARIO,PASS,CORREO,ROL_ID_ROL,FECHA_MEDICINA_AEROESPACIAL,ESTADO) values ('18923003-6','Bernardo','Pavez','Pino','Bpavez','Bpavez','Bpavez@vuelos.com','4',to_date('02/12/16','DD/MM/RR'),'ACTIVO');
@@ -452,7 +452,7 @@ Insert into USUARIO (RUT,NOMBRE,AP_PATERNO,AP_MATERENO,USUARIO,PASS,CORREO,ROL_I
 Insert into USUARIO (RUT,NOMBRE,AP_PATERNO,AP_MATERENO,USUARIO,PASS,CORREO,ROL_ID_ROL,FECHA_MEDICINA_AEROESPACIAL,ESTADO) values ('18691926-2','Sergio','Urrutia','Garrido','surrutia','surrutia','surrutia@vuelos.com','3',to_date('02/12/16','DD/MM/RR'),'ACTIVO');
 Insert into USUARIO (RUT,NOMBRE,AP_PATERNO,AP_MATERENO,USUARIO,PASS,CORREO,ROL_ID_ROL,FECHA_MEDICINA_AEROESPACIAL,ESTADO) values ('13828801-3','John','Barril','Arenas','jbarril','jbarril','jbarril@vuelos.com','3',to_date('02/12/16','DD/MM/RR'),'ACTIVO');
 Insert into USUARIO (RUT,NOMBRE,AP_PATERNO,AP_MATERENO,USUARIO,PASS,CORREO,ROL_ID_ROL,FECHA_MEDICINA_AEROESPACIAL,ESTADO) values ('19609576-4','Nicolas','Silva','Gonzalez','nsilva','nsilva','nsilva@vuelos.com','3',to_date('02/12/16','DD/MM/RR'),'ACTIVO');
-Insert into USUARIO (RUT,NOMBRE,AP_PATERNO,AP_MATERENO,USUARIO,PASS,CORREO,ROL_ID_ROL,FECHA_MEDICINA_AEROESPACIAL,ESTADO) values ('15405899-0','alejandro','Peña','Galvez','apeña','apeña','apeña@vuelos.com','3',to_date('10/10/16','DD/MM/RR'),'ACTIVO');
+Insert into USUARIO (RUT,NOMBRE,AP_PATERNO,AP_MATERENO,USUARIO,PASS,CORREO,ROL_ID_ROL,FECHA_MEDICINA_AEROESPACIAL,ESTADO) values ('15405899-0','Alejandro','Peña','Galvez','apeña','apeña','apeña@vuelos.com','3',to_date('17/10/17','DD/MM/RR'),'ACTIVO');
 Insert into USUARIO (RUT,NOMBRE,AP_PATERNO,AP_MATERENO,USUARIO,PASS,CORREO,ROL_ID_ROL,FECHA_MEDICINA_AEROESPACIAL,ESTADO) values ('17012168-9','Patricio','Rojas','Vilchez','operador','operador','projas@operador.com','2',null,'ACTIVO');
 Insert into USUARIO (RUT,NOMBRE,AP_PATERNO,AP_MATERENO,USUARIO,PASS,CORREO,ROL_ID_ROL,FECHA_MEDICINA_AEROESPACIAL,ESTADO) values ('114445523','pito','pito','pito','piloto','piloto','pito','5',null,'DESACTIVADO');
 Insert into USUARIO (RUT,NOMBRE,AP_PATERNO,AP_MATERENO,USUARIO,PASS,CORREO,ROL_ID_ROL,FECHA_MEDICINA_AEROESPACIAL,ESTADO) values ('16193691k','Daniel','Rojos','Rojas','drojosr','klgh69','drojosr@gmail.com','2',null,'ACTIVO');
@@ -694,16 +694,12 @@ Insert into VUELO (ID_VUELO,FECHA_SALIDA,FECHA_ARRIBO,TOTAL_TIEMPO,CONDICION_VUE
 --  Constraints for Table LICENCIA
 --------------------------------------------------------
 
-  ALTER TABLE "LICENCIA" MODIFY ("ID_TIPO_LICENCIA" NOT NULL ENABLE);
   ALTER TABLE "LICENCIA" MODIFY ("PERSONA_RUT" NOT NULL ENABLE);
   ALTER TABLE "LICENCIA" ADD CONSTRAINT "LICENCIA_PK" PRIMARY KEY ("ID_LICENCIA")
   USING INDEX PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
   STORAGE(INITIAL 65536 NEXT 1048576 MINEXTENTS 1 MAXEXTENTS 2147483645
   PCTINCREASE 0 FREELISTS 1 FREELIST GROUPS 1 BUFFER_POOL DEFAULT FLASH_CACHE DEFAULT CELL_FLASH_CACHE DEFAULT)
   TABLESPACE "USERS"  ENABLE;
-  ALTER TABLE "LICENCIA" MODIFY ("ESTADO_VIGENCIA" NOT NULL ENABLE);
-  ALTER TABLE "LICENCIA" MODIFY ("FECHA_EXPIRACION" NOT NULL ENABLE);
-  ALTER TABLE "LICENCIA" MODIFY ("FECHA_EMISION" NOT NULL ENABLE);
   ALTER TABLE "LICENCIA" MODIFY ("ID_LICENCIA" NOT NULL ENABLE);
 --------------------------------------------------------
 --  Constraints for Table TIPO_LICENCIA
@@ -912,7 +908,7 @@ Insert into VUELO (ID_VUELO,FECHA_SALIDA,FECHA_ARRIBO,TOTAL_TIEMPO,CONDICION_VUE
     END AFTER STATEMENT;
 END ACTUALIZAR_ESTADO_USUARIO;
 /
-ALTER TRIGGER "ACTUALIZAR_ESTADO_USUARIO" DISABLE;
+ALTER TRIGGER "ACTUALIZAR_ESTADO_USUARIO" ENABLE;
 --------------------------------------------------------
 --  DDL for Trigger CIUDAD_TRG
 --------------------------------------------------------
@@ -1157,7 +1153,7 @@ select
 aeronave.MATRICULA as "Matricula",
 aeronave.MARCA as "Marca",
 tipo.NOMBRE_TIPO as "Tipo de aeronave", 
-TO_CHAR(aeronave.FECHA_VENCIMIENTO_DGAC,'DD/MON/YYYY') as "Venc certificado DGAC",
+TO_CHAR(aeronave.FECHA_VENCIMIENTO_DGAC,'DD/MM/YYYY') as "Venc certificado DGAC",
 aeronave.HORAS_DE_VUELO ||' Hrs' as "Horas de vuelo",
 aeronave.KMPORHORAS ||' Km/h' as "Velocidad Max", 
 aeronave.ESTADO_AERONAVE  as "Estado"
@@ -1251,6 +1247,38 @@ end;
 
 /
 --------------------------------------------------------
+--  DDL for Procedure PILOTO_HABILITAR
+--------------------------------------------------------
+set define off;
+
+  CREATE OR REPLACE PROCEDURE "PILOTO_HABILITAR" 
+
+(p_recordset OUT SYS_REFCURSOR)
+AS
+begin
+OPEN p_recordset FOR
+SELECT DISTINCT US.RUT AS "Rut",
+US.NOMBRE||' '||US.AP_PATERNO||' '||SUBSTR(US.AP_MATERENO,0,1)||'.' AS "Nombre",
+TO_CHAR(US.FECHA_MEDICINA_AEROESPACIAL,'DD/MM/YYYY') AS "Venc Med Aeroespacial",
+TL.NOMBRE AS "Tipo de licencia",
+TO_CHAR(LI.FECHA_EMISION,'DD/MM/YYYY') AS "Emis Licencia",
+TO_CHAR(LI.FECHA_EXPIRACION,'DD/MM/YYYY') AS "Venc Licencia",
+US.ESTADO AS "Estado"
+FROM USUARIO US RIGHT JOIN LICENCIA LI
+ON (US.RUT = LI.PERSONA_RUT)
+LEFT JOIN TIPO_LICENCIA TL
+ON (LI.ID_TIPO_LICENCIA= TL.ID_TIPO_LICENCIA)
+WHERE (US.ROL_ID_ROL = 3
+AND US.ESTADO = 'DESACTIVADO'
+AND (US.FECHA_MEDICINA_AEROESPACIAL < sysdate
+OR LI.FECHA_EXPIRACION < sysdate))
+OR (US.FECHA_MEDICINA_AEROESPACIAL IS NULL
+OR LI.FECHA_EXPIRACION IS NULL)
+order by US.RUT;
+end;
+
+/
+--------------------------------------------------------
 --  DDL for Procedure PILOTO_SELECT
 --------------------------------------------------------
 set define off;
@@ -1266,10 +1294,10 @@ begin
 OPEN p_recordset FOR
 SELECT DISTINCT US.RUT AS "Rut",
 US.NOMBRE||' '||US.AP_PATERNO||' '||SUBSTR(US.AP_MATERENO,0,1)||'.' AS "Nombre",
-TO_CHAR(US.FECHA_MEDICINA_AEROESPACIAL,'DD/MON/YYYY') AS "Venc Med Aeroespacial",
+TO_CHAR(US.FECHA_MEDICINA_AEROESPACIAL,'DD/MM/YYYY') AS "Venc Med Aeroespacial",
 TL.NOMBRE AS "Tipo de licencia",
-TO_CHAR(LI.FECHA_EMISION,'DD/MON/YYYY') AS "Emis Licencia",
-TO_CHAR(LI.FECHA_EXPIRACION,'DD/MON/YYYY') AS "Venc Licencia",
+TO_CHAR(LI.FECHA_EMISION,'DD/MM/YYYY') AS "Emis Licencia",
+TO_CHAR(LI.FECHA_EXPIRACION,'DD/MM/YYYY') AS "Venc Licencia",
 US.ESTADO AS "Estado"
 FROM USUARIO US, LICENCIA LI, TIPO_LICENCIA TL
 WHERE US.RUT = LI.PERSONA_RUT
@@ -1301,6 +1329,48 @@ OPEN p_recordset FOR
 select ID_TIPO_LICENCIA,NOMBRE from TIPO_LICENCIA
 WHERE NOMBRE LIKE tipo_var;
 end;
+
+/
+--------------------------------------------------------
+--  DDL for Procedure PILOTO_TIPO_ALL
+--------------------------------------------------------
+set define off;
+
+  CREATE OR REPLACE PROCEDURE "PILOTO_TIPO_ALL" 
+( 
+p_recordset OUT SYS_REFCURSOR)
+AS
+begin
+OPEN p_recordset FOR
+select ID_TIPO_LICENCIA,NOMBRE from TIPO_LICENCIA
+ORDER BY NOMBRE;
+end;
+
+/
+--------------------------------------------------------
+--  DDL for Procedure PILOTO_UPDATE
+--------------------------------------------------------
+set define off;
+
+  CREATE OR REPLACE PROCEDURE "PILOTO_UPDATE" (   
+var_rut IN USUARIO.rut%TYPE,
+var_feMedicina IN USUARIO.FECHA_MEDICINA_AEROESPACIAL%TYPE, 
+var_tipoLicencia IN LICENCIA.ID_TIPO_LICENCIA%TYPE,
+var_estadoLicnecia IN LICENCIA.ESTADO_VIGENCIA%TYPE, 
+var_emisionLicencia IN LICENCIA.FECHA_EMISION%type,
+var_ExpiracionLicencia IN LICENCIA.FECHA_EXPIRACION%TYPE) 
+AS
+BEGIN
+update USUARIO set FECHA_MEDICINA_AEROESPACIAL = var_feMedicina
+where RUT = var_rut;
+
+update LICENCIA set ID_TIPO_LICENCIA = var_tipoLicencia,
+                    ESTADO_VIGENCIA = var_estadoLicnecia,
+                    FECHA_EMISION = var_emisionLicencia,
+                    FECHA_EXPIRACION = var_ExpiracionLicencia
+
+where PERSONA_RUT = var_rut;
+END;
 
 /
 --------------------------------------------------------
@@ -1626,8 +1696,8 @@ AS
 begin
 OPEN p_recordset FOR
 select  
-TO_CHAR(LI.FECHA_EMISION,'DD-MON-YYYY') AS "Fecha Emision",
-TO_CHAR(LI.FECHA_EXPIRACION,'DD-MON-YYYY') AS "Venc. Licencia",
+TO_CHAR(LI.FECHA_EMISION,'DD-MM-YYYY') AS "Fecha Emision",
+TO_CHAR(LI.FECHA_EXPIRACION,'DD-MM-YYYY') AS "Venc. Licencia",
 TL.NOMBRE AS "Tipo de licencia"
 FROM LICENCIA LI, TIPO_LICENCIA TL,
 USUARIO US

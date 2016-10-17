@@ -80,6 +80,12 @@
     <Compile Include="negocio\NePiloto.cs" />
     <Compile Include="negocio\NeTripulacion.cs" />
     <Compile Include="negocio\NeVuelo.cs" />
+    <Compile Include="vista\Form_Habilitar_Piloto.xaml.cs">
+      <DependentUpon>Form_Habilitar_Piloto.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="vista\HabilitarPiloto.xaml.cs">
+      <DependentUpon>HabilitarPiloto.xaml</DependentUpon>
+    </Compile>
     <Compile Include="vista\Ingrear_vuelo_avion.xaml.cs">
       <DependentUpon>Ingrear_vuelo_avion.xaml</DependentUpon>
     </Compile>
@@ -126,6 +132,14 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="vista\Form_Habilitar_Piloto.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="vista\HabilitarPiloto.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="vista\Ingrear_vuelo_avion.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -207,6 +221,9 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="skyicon.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="vista\Resources\Correcto.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

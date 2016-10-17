@@ -38,7 +38,7 @@
                 <SolidColorBrush Color="#FF8BABB9" Opacity="0.7"/>
             </Button.Background>
         </Button>
-        <Button x:Name="button2" Content="Habilitar Piloto" HorizontalAlignment="Left" Margin="39,107.667,0,0" Grid.Row="2" VerticalAlignment="Top" Width="113" Height="25" Foreground="White">
+        <Button x:Name="buttonHabilitarPiloto" Content="Habilitar Piloto" HorizontalAlignment="Left" Margin="39,107.667,0,0" Grid.Row="2" VerticalAlignment="Top" Width="113" Height="25" Foreground="White" Click="buttonHabilitarPiloto_Click">
             <Button.Background>
                 <SolidColorBrush Color="#FF8BABB9" Opacity="0.7"/>
             </Button.Background>

@@ -39,6 +39,23 @@ namespace MantenedoresCRUD.dao
             return data;
         }
 
+
+        public DataSet pilotoTipoAll()
+        {
+            conn.Open();
+            OracleCommand ora_cmd = new OracleCommand(conn.getUsuario() + "PILOTO_TIPO_ALL", conn.Cnn);
+            ora_cmd.BindByName = true;
+            ora_cmd.CommandType = CommandType.StoredProcedure;
+            ora_cmd.Parameters.Add("p_recordset", OracleDbType.RefCursor, ParameterDirection.Output);
+            ora_cmd.ExecuteNonQuery();
+
+            OracleDataAdapter adapter = new OracleDataAdapter(ora_cmd);
+            DataSet data = new DataSet();
+            adapter.Fill(data, "piloto_tipoAll", (OracleRefCursor)(ora_cmd.Parameters["p_recordset"].Value));
+            conn.Close();
+            return data;
+        }
+
         public DataSet getPiloto(Usuario piloto)
         {
             conn.Open();
@@ -56,6 +73,40 @@ namespace MantenedoresCRUD.dao
             adapter.Fill(data, "listaPiloto", (OracleRefCursor)(ora_cmd.Parameters["p_recordset"].Value));
             conn.Close();
             return data;
+        }
+
+
+        public DataSet listHabilitarPiloto()
+        {
+            conn.Open();
+            OracleCommand ora_cmd = new OracleCommand(conn.getUsuario() + "PILOTO_HABILITAR", conn.Cnn);
+            ora_cmd.BindByName = true;
+            ora_cmd.CommandType = CommandType.StoredProcedure;
+            ora_cmd.Parameters.Add("p_recordset", OracleDbType.RefCursor, ParameterDirection.Output);
+            ora_cmd.ExecuteNonQuery();
+
+            OracleDataAdapter adapter = new OracleDataAdapter(ora_cmd);
+            DataSet data = new DataSet();
+            adapter.Fill(data, "habilitarPiloto", (OracleRefCursor)(ora_cmd.Parameters["p_recordset"].Value));
+            conn.Close();
+            return data;
+        }
+
+
+        public void habilitarPiloto(Usuario piloto)
+        {
+            conn.Open();
+            OracleCommand ora_cmd = new OracleCommand(conn.getUsuario() + "PILOTO_UPDATE", conn.Cnn);
+            ora_cmd.BindByName = true;
+            ora_cmd.CommandType = CommandType.StoredProcedure;
+            ora_cmd.Parameters.Add("var_rut", OracleDbType.Varchar2, piloto.Rut, ParameterDirection.Input);
+            ora_cmd.Parameters.Add("var_feMedicina", OracleDbType.Date, piloto.FechaMeAeroespacial, ParameterDirection.Input);
+            ora_cmd.Parameters.Add("var_tipoLicencia", OracleDbType.Int16, piloto.Licencia.TipoLicencia.IdTipoLIcencia, ParameterDirection.Input);
+            ora_cmd.Parameters.Add("var_estadoLicnecia", OracleDbType.Char, piloto.Licencia.Estado1, ParameterDirection.Input);
+            ora_cmd.Parameters.Add("var_emisionLicencia", OracleDbType.Date, piloto.Licencia.FechaEmision, ParameterDirection.Input);
+            ora_cmd.Parameters.Add("var_ExpiracionLicencia", OracleDbType.Date, piloto.Licencia.FechaExpiracion, ParameterDirection.Input);
+            ora_cmd.ExecuteNonQuery();
+            conn.Close();
         }
     }
 }

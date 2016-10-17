@@ -22,6 +22,13 @@ namespace MantenedoresCRUD.negocio
             return piloto.pilotoTipo(tipo);
         }
 
+        public DataSet getTipoPilotoAll()
+        {
+
+            PilotoDao piloto = new PilotoDao();
+            return piloto.pilotoTipoAll();
+        }
+
         public DataSet listarPiloto(Usuario piloto)
         {
             string rut = piloto.Rut;
@@ -39,6 +46,22 @@ namespace MantenedoresCRUD.negocio
 
             PilotoDao listpiloto = new PilotoDao();
             return listpiloto.getPiloto(piloto);
+        }
+
+
+        public DataSet getHabilitarPiloto()
+        {
+
+            PilotoDao listpiloto = new PilotoDao();
+            return listpiloto.listHabilitarPiloto();
+        }
+
+
+        public void updatePiloto(Usuario piloto)
+        {
+
+            PilotoDao updateP = new PilotoDao();
+            updateP.habilitarPiloto(piloto);
         }
     }
 }

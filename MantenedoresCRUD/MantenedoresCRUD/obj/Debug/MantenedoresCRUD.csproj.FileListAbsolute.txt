@@ -33,3 +33,7 @@ C:\Users\Nacho_2\Desktop\MantenedoresCRUD\MantenedoresCRUD\obj\Debug\vista\Selec
 C:\Users\Nacho_2\Desktop\MantenedoresCRUD\MantenedoresCRUD\obj\Debug\vista\Seleccion_Tripulacion.baml
 C:\Users\Nacho_2\Desktop\MantenedoresCRUD\MantenedoresCRUD\obj\Debug\vista\Vuelo_Resumen.g.cs
 C:\Users\Nacho_2\Desktop\MantenedoresCRUD\MantenedoresCRUD\obj\Debug\vista\Vuelo_Resumen.baml
+C:\Users\Nacho_2\Desktop\MantenedoresCRUD\MantenedoresCRUD\obj\Debug\vista\HabilitarPiloto.g.cs
+C:\Users\Nacho_2\Desktop\MantenedoresCRUD\MantenedoresCRUD\obj\Debug\vista\HabilitarPiloto.baml
+C:\Users\Nacho_2\Desktop\MantenedoresCRUD\MantenedoresCRUD\obj\Debug\vista\Form_Habilitar_Piloto.g.cs
+C:\Users\Nacho_2\Desktop\MantenedoresCRUD\MantenedoresCRUD\obj\Debug\vista\Form_Habilitar_Piloto.baml

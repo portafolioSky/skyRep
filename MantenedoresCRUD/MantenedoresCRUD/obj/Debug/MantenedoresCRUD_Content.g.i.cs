@@ -8,6 +8,6 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("skyicon.ico")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("vista/resources/ok.png")]
 
 

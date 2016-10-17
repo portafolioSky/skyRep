@@ -1,0 +1,50 @@
+﻿<Window x:Class="MantenedoresCRUD.vista.Form_Habilitar_Piloto"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:MantenedoresCRUD.vista"
+        mc:Ignorable="d"
+        Title="Form_Habilitar_Piloto" Height="514" Width="500" Background="Transparent" WindowStartupLocation="CenterScreen" ResizeMode="NoResize" WindowStyle="None" AllowsTransparency="True" Icon="../skyicon.ico">
+    <Grid Background="#FF1F4F6E" MouseLeftButtonDown="DockPanel_MouseLeftButtonDown" Height="514" VerticalAlignment="Top">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="65*"/>
+            <RowDefinition Height="69*"/>
+            <RowDefinition Height="466*"/>
+        </Grid.RowDefinitions>
+        <Rectangle Fill="#FFF5F5FF" Height="448" Margin="10,45,0,0" Stroke="White" VerticalAlignment="Top" Grid.RowSpan="3" HorizontalAlignment="Left" Width="480"/>
+        <Image x:Name="image" HorizontalAlignment="Left" Height="71" Margin="10,0,0,0" Grid.Row="1" VerticalAlignment="Top" Width="172" Source="Resources/sky logo.png" Grid.RowSpan="2"/>
+        <Label x:Name="label1" Content="Ingresar Vuelo" HorizontalAlignment="Left" Margin="10,14,0,0" VerticalAlignment="Top" FontSize="16" FontWeight="Medium" Foreground="White" Height="31" Width="115"/>
+        <Button x:Name="buttonCancel" Content="Cancelar" HorizontalAlignment="Left" Margin="426,19,0,0" Grid.Row="1" VerticalAlignment="Top" Width="53" Height="32" Background="{x:Null}" Click="buttonCancel_Click"/>
+        <GroupBox x:Name="groupBox3" Header="Ingresar Datos" HorizontalAlignment="Left" Margin="26,10,0,0" Grid.Row="2" VerticalAlignment="Top" Height="296" Width="453"/>
+        <Button x:Name="buttonAceptar" Content="Aceptar" HorizontalAlignment="Left" Margin="214,327,0,0" Grid.Row="2" VerticalAlignment="Top" Width="75" Height="22" Click="buttonAceptar_Click"/>
+        <Label  Content="RUT:" HorizontalAlignment="Left" Margin="35,46,0,0" Grid.Row="2" VerticalAlignment="Top" Height="24" Width="118"/>
+        <Label  Content="Nombre:" HorizontalAlignment="Left" Margin="35,86,0,0" Grid.Row="2" VerticalAlignment="Top" Height="26" Width="118"/>
+        <Label  Content="Tipo de Licencia:" HorizontalAlignment="Left" Margin="35,125,0,0" Grid.Row="2" VerticalAlignment="Top" Height="26" Width="118"/>
+        <Label  Content="Fecha Emisión Licencia:" HorizontalAlignment="Left" Margin="35,173,0,0" Grid.Row="2" VerticalAlignment="Top" Height="26" Width="133"/>
+        <Label Content="Fecha Venc. Medicina Aeroespacial:" HorizontalAlignment="Left" Margin="35,260,0,0" Grid.Row="2" VerticalAlignment="Top" Height="25" Width="198"/>
+        <Label Content="Fecha Venc. Licencia:" HorizontalAlignment="Left" Margin="35,217,0,0" Grid.Row="2" VerticalAlignment="Top" Width="137"/>
+        <Separator HorizontalAlignment="Left" Height="13" Margin="90,157,0,0" Grid.Row="2" VerticalAlignment="Top" Width="282" RenderTransformOrigin="0.5,0.5">
+            <Separator.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="89.773"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Separator.RenderTransform>
+        </Separator>
+        <Label x:Name="labelRut" Content="Label" HorizontalAlignment="Left" Margin="240,46,0,0" Grid.Row="2" VerticalAlignment="Top" Width="216"/>
+        <Label x:Name="labelNombre" Content="Label" HorizontalAlignment="Left" Margin="240,86,0,0" Grid.Row="2" VerticalAlignment="Top" Width="216"/>
+        <DatePicker x:Name="fechaEmisionLicencia"  HorizontalAlignment="Left" Margin="240,175,0,0" Grid.Row="2" VerticalAlignment="Top" Width="161" SelectedDateChanged="emiLicencia_SelectedDateChanged"/>
+        <DatePicker x:Name="fechaVencimientoLicencia" HorizontalAlignment="Left" Margin="240,217,0,0" Grid.Row="2" VerticalAlignment="Top" Width="161" SelectedDateChanged="venLicencia_SelectedDateChanged"/>
+        <DatePicker x:Name="fechaVencMedicina" HorizontalAlignment="Left" Margin="240,260,0,0" Grid.Row="2" VerticalAlignment="Top" Width="161" SelectedDateChanged="venMedicina_SelectedDateChanged"/>
+        <ComboBox x:Name="comboBoxipoLicencia" HorizontalAlignment="Left" Margin="240,125,0,0" Grid.Row="2" VerticalAlignment="Top" Width="145"/>
+        <Image x:Name="imageLicenciaEmi" HorizontalAlignment="Left" Height="26" Margin="417,173,0,0" Grid.Row="2" VerticalAlignment="Top" Width="25" />
+        <Image x:Name="imageLicenciaVen" HorizontalAlignment="Left" Height="26" Margin="417,217,0,0" Grid.Row="2" VerticalAlignment="Top" Width="25" />
+        <Image x:Name="imageMEdicinaVEn" HorizontalAlignment="Left" Height="26" Margin="417,260,0,0" Grid.Row="2" VerticalAlignment="Top" Width="25" />
+    </Grid>
+</Window>

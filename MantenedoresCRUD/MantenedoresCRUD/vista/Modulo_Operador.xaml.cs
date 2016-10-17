@@ -13,6 +13,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 using MantenedoresCRUD.modelo;
 using MantenedoresCRUD.negocio;
+using System.Data;
 
 namespace MantenedoresCRUD.vista
 {
@@ -62,6 +63,14 @@ namespace MantenedoresCRUD.vista
             Ingresar_vuelo ingresarVuelo = new Ingresar_vuelo();
             ingresarVuelo.ShowDialog();
 
+        }
+
+      
+
+        private void buttonHabilitarPiloto_Click(object sender, RoutedEventArgs e)
+        {
+            HabilitarPiloto habilitarPiloto = new HabilitarPiloto();
+            habilitarPiloto.ShowDialog();
         }
     }
 }

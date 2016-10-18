@@ -92,3 +92,6 @@ C:\Users\Nacho_2\Desktop\MantenedoresCRUD\MantenedoresCRUD\obj\Debug\vista\Ingre
 C:\Users\Nacho_2\Desktop\MantenedoresCRUD\MantenedoresCRUD\obj\Debug\vista\Ingresar_aeronave_componente.g.cs
 C:\Users\Nacho_2\Desktop\MantenedoresCRUD\MantenedoresCRUD\obj\Debug\vista\Ingresar_aeronave.baml
 C:\Users\Nacho_2\Desktop\MantenedoresCRUD\MantenedoresCRUD\obj\Debug\vista\Ingresar_aeronave_componente.baml
+C:\Users\Nacho_2\Desktop\PORTAFOLIO GIT\skyRep\MantenedoresCRUD\MantenedoresCRUD\bin\Debug\MantenedoresCRUD.exe.config
+C:\Users\Nacho_2\Desktop\PORTAFOLIO GIT\skyRep\MantenedoresCRUD\MantenedoresCRUD\obj\Debug\MantenedoresCRUD.exe
+C:\Users\Nacho_2\Desktop\PORTAFOLIO GIT\skyRep\MantenedoresCRUD\MantenedoresCRUD\obj\Debug\MantenedoresCRUD.pdb

@@ -76,12 +76,14 @@ namespace MantenedoresCRUD.dao
         }
 
 
-        public DataSet listHabilitarPiloto()
+        public DataSet listHabilitarPiloto(Usuario piloto)
         {
             conn.Open();
             OracleCommand ora_cmd = new OracleCommand(conn.getUsuario() + "PILOTO_HABILITAR", conn.Cnn);
             ora_cmd.BindByName = true;
             ora_cmd.CommandType = CommandType.StoredProcedure;
+            ora_cmd.Parameters.Add("rut_var", OracleDbType.Varchar2, piloto.Rut, ParameterDirection.Input);
+            ora_cmd.Parameters.Add("nombre_var", OracleDbType.Varchar2, piloto.Nombre, ParameterDirection.Input);
             ora_cmd.Parameters.Add("p_recordset", OracleDbType.RefCursor, ParameterDirection.Output);
             ora_cmd.ExecuteNonQuery();
 

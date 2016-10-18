@@ -25,20 +25,23 @@ namespace MantenedoresCRUD.vista
 
         private NePiloto nePiloto = new NePiloto();
         private DataSet ds = new DataSet();
-        private Usuario piloto;
+        private Usuario piloto= new Usuario();
         public HabilitarPiloto()
         {
             InitializeComponent();
 
+            piloto.Rut = textBoxRut.Text;
+            piloto.Nombre = textBoxNombre.Text;
 
-            ds = nePiloto.getHabilitarPiloto();
+            ds = nePiloto.getHabilitarPiloto(piloto);
             dataGridPilotos.ItemsSource = new DataView(ds.Tables["habilitarPiloto"]);
         }
 
         public void recargarLista()
         {
 
-            ds = nePiloto.getHabilitarPiloto();
+
+            ds = nePiloto.getHabilitarPiloto(piloto);
             dataGridPilotos.ItemsSource = new DataView(ds.Tables["habilitarPiloto"]);
         }
 
@@ -74,6 +77,24 @@ namespace MantenedoresCRUD.vista
                 next.ShowDialog();
 
             }
+        }
+
+        private void textBoxRut_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            piloto.Rut = textBoxRut.Text;
+            piloto.Nombre = textBoxNombre.Text;
+
+            ds = nePiloto.getHabilitarPiloto(piloto);
+            dataGridPilotos.ItemsSource = new DataView(ds.Tables["habilitarPiloto"]);
+        }
+
+        private void textBoxNombre_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            piloto.Rut = textBoxRut.Text;
+            piloto.Nombre = textBoxNombre.Text;
+
+            ds = nePiloto.getHabilitarPiloto(piloto);
+            dataGridPilotos.ItemsSource = new DataView(ds.Tables["habilitarPiloto"]);
         }
     }
 }

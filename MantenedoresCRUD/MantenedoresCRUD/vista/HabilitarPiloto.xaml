@@ -5,8 +5,8 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:MantenedoresCRUD.vista"
         mc:Ignorable="d"
-        Title="HabilitarPiloto" Height="573.039" Width="737" Background="Transparent" WindowStartupLocation="CenterScreen" ResizeMode="NoResize" WindowStyle="None" AllowsTransparency="True" Icon="../skyicon.ico">
-    <Grid Background="#FF1F4F6E" MouseLeftButtonDown="DockPanel_MouseLeftButtonDown" Height="573" VerticalAlignment="Top" HorizontalAlignment="Left" Width="737">
+        Title="HabilitarPiloto" Height="573.039" Width="644" Background="Transparent" WindowStartupLocation="CenterScreen" ResizeMode="NoResize" WindowStyle="None" AllowsTransparency="True" Icon="../skyicon.ico">
+    <Grid Background="#FF1F4F6E" MouseLeftButtonDown="DockPanel_MouseLeftButtonDown" Height="573" VerticalAlignment="Top" HorizontalAlignment="Left" Width="644">
         <Grid.ColumnDefinitions>
             <ColumnDefinition/>
         </Grid.ColumnDefinitions>
@@ -16,13 +16,18 @@
             <RowDefinition Height="9*"/>
             <RowDefinition Height="535*"/>
         </Grid.RowDefinitions>
-        <Rectangle Fill="#FFF5F5FF" Height="518" Margin="10,45,0,0" Stroke="White" VerticalAlignment="Top" Grid.RowSpan="4" HorizontalAlignment="Left" Width="717"/>
+        <Rectangle Fill="#FFF5F5FF" Height="518" Margin="10,45,0,0" Stroke="White" VerticalAlignment="Top" Grid.RowSpan="4" HorizontalAlignment="Left" Width="623"/>
         <Image x:Name="image" HorizontalAlignment="Left" Height="71" Margin="10,0,0,0" Grid.Row="1" VerticalAlignment="Top" Width="172" Source="Resources/sky logo.png" Grid.RowSpan="2"/>
         <Label x:Name="label1" Content="Habilitar Piloto" HorizontalAlignment="Left" Margin="10,14,0,0" VerticalAlignment="Top" FontSize="16" FontWeight="Medium" Foreground="White" Height="31" Width="130"/>
-        <Button x:Name="buttonCancel" Content="Cancelar" HorizontalAlignment="Left" Margin="668,0,0,0" Grid.Row="1" VerticalAlignment="Top" Width="52" Height="32" Background="{x:Null}" Click="buttonCancel_Click"/>
+        <Button x:Name="buttonCancel" Content="Cancelar" HorizontalAlignment="Left" Margin="571,0,0,0" Grid.Row="1" VerticalAlignment="Top" Width="52" Height="32" Background="{x:Null}" Click="buttonCancel_Click"/>
         <Label x:Name="labelHorasDespegue"  HorizontalAlignment="Left" Margin="370,133,0,0" Grid.Row="3" VerticalAlignment="Top" FontWeight="Medium" Foreground="#FF7D84CB"/>
         <Label x:Name="labelHoraArribo"  HorizontalAlignment="Left" Margin="370,200,0,0" Grid.Row="3" VerticalAlignment="Top" FontWeight="Medium" Foreground="#FF7D84CB"/>
-        <GroupBox x:Name="groupBox1" Header="Seleccionar piloto" HorizontalAlignment="Left" Margin="27,18,0,0" Grid.Row="3" VerticalAlignment="Top" Height="394" Width="684"/>
-        <DataGrid x:Name="dataGridPilotos" HorizontalAlignment="Left" Margin="37,41,0,0" Grid.Row="3" VerticalAlignment="Top" Height="363" Width="664" IsReadOnly="True" SelectionChanged="dataGridPilotos_SelectionChanged"/>
+        <GroupBox x:Name="groupBox1" Header="Seleccionar piloto" HorizontalAlignment="Left" Margin="27,96,0,0" Grid.Row="3" VerticalAlignment="Top" Height="316" Width="587"/>
+        <DataGrid x:Name="dataGridPilotos" HorizontalAlignment="Left" Margin="37,112,0,0" Grid.Row="3" VerticalAlignment="Top" Height="292" Width="567" IsReadOnly="True" SelectionChanged="dataGridPilotos_SelectionChanged"/>
+        <TextBox x:Name="textBoxRut" HorizontalAlignment="Left" Height="23" Margin="130,17,0,0" Grid.Row="3" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" TextChanged="textBoxRut_TextChanged"/>
+        <TextBox x:Name="textBoxNombre" HorizontalAlignment="Left" Height="23" Margin="130,59,0,0" Grid.Row="3" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" TextChanged="textBoxNombre_TextChanged"/>
+        <Label  Content="Nombre:" HorizontalAlignment="Left" Margin="66,56,0,0" Grid.Row="3" VerticalAlignment="Top"/>
+        <Label  Content="RUT:" HorizontalAlignment="Left" Margin="88,14,0,0" Grid.Row="3" VerticalAlignment="Top"/>
+        <GroupBox x:Name="groupBox" Header="Busqueda" HorizontalAlignment="Left" Margin="27,0,0,0" Grid.Row="3" VerticalAlignment="Top" Height="91" Width="278"/>
     </Grid>
 </Window>

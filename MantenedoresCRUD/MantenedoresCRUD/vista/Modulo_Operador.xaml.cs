@@ -72,5 +72,11 @@ namespace MantenedoresCRUD.vista
             HabilitarPiloto habilitarPiloto = new HabilitarPiloto();
             habilitarPiloto.ShowDialog();
         }
+
+        private void button3_Click(object sender, RoutedEventArgs e)
+        {
+            Ingresar_Piloto ingresarPiloto = new Ingresar_Piloto();
+            ingresarPiloto.ShowDialog();
+        }
     }
 }

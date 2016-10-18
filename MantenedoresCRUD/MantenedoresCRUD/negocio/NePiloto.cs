@@ -49,11 +49,18 @@ namespace MantenedoresCRUD.negocio
         }
 
 
-        public DataSet getHabilitarPiloto()
+        public DataSet getHabilitarPiloto(Usuario piloto)
         {
+            string rut = piloto.Rut;
+            string UpperNombre = CultureInfo.CurrentCulture.TextInfo.ToTitleCase(piloto.Nombre);
+
+            if (rut.Equals("")) piloto.Rut = "%";
+            else piloto.Rut = rut + "%";
+            if (UpperNombre.Equals("")) piloto.Nombre = "%";
+            else piloto.Nombre = UpperNombre + "%";
 
             PilotoDao listpiloto = new PilotoDao();
-            return listpiloto.listHabilitarPiloto();
+            return listpiloto.listHabilitarPiloto(piloto);
         }
 
 

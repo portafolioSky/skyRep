@@ -89,6 +89,9 @@
     <Compile Include="vista\Ingrear_vuelo_avion.xaml.cs">
       <DependentUpon>Ingrear_vuelo_avion.xaml</DependentUpon>
     </Compile>
+    <Compile Include="vista\Ingresar_Piloto.xaml.cs">
+      <DependentUpon>Ingresar_Piloto.xaml</DependentUpon>
+    </Compile>
     <Compile Include="vista\Ingresar_vuelo.xaml.cs">
       <DependentUpon>Ingresar_vuelo.xaml</DependentUpon>
     </Compile>
@@ -141,6 +144,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="vista\Ingrear_vuelo_avion.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="vista\Ingresar_Piloto.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

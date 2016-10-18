@@ -14,7 +14,6 @@ using System.Windows.Shapes;
 using MantenedoresCRUD.modelo;
 using System.Data;
 using MantenedoresCRUD.negocio;
-using System.IO;
 
 namespace MantenedoresCRUD.vista
 {
@@ -36,8 +35,6 @@ namespace MantenedoresCRUD.vista
 
             labelRut.Content = piloto.Rut;
             labelNombre.Content = piloto.Nombre;
-
-
 
 
             nePiloto = new NePiloto();
@@ -117,10 +114,9 @@ namespace MantenedoresCRUD.vista
             piloto.Licencia.FechaExpiracion = fechaVencimientoLicencia.SelectedDate.Value;
             piloto.Licencia.Estado1 = 't';
             piloto.FechaMeAeroespacial = fechaVencMedicina.SelectedDate.Value;
-
             nePiloto.updatePiloto(piloto);
             habilitarP.recargarLista();
             this.Close();
-    }
+        }
     }
 }

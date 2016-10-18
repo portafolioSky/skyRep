@@ -66,9 +66,15 @@
     <Compile Include="dao\AeronaveDao.cs" />
     <Compile Include="dao\PilotoDao.cs" />
     <Compile Include="dao\TripulacionDao.cs" />
+    <Compile Include="dao\ComponenteDAO.cs" />
+    <Compile Include="dao\MantenimientoAeronaveDao.cs" />
+    <Compile Include="dao\MantenimientoComponenteDAO.cs" />
     <Compile Include="dao\VueloDao.cs" />
     <Compile Include="modelo\Aeronave.cs" />
     <Compile Include="modelo\Ciudad.cs" />
+    <Compile Include="modelo\Componente.cs" />
+    <Compile Include="modelo\MantenimientoAeronave.cs" />
+    <Compile Include="modelo\MantenimientoComponente.cs" />
     <Compile Include="modelo\Pais.cs" />
     <Compile Include="modelo\LicenciaPiloto.cs" />
     <Compile Include="modelo\Region.cs" />
@@ -79,18 +85,39 @@
     <Compile Include="negocio\NeAeronave.cs" />
     <Compile Include="negocio\NePiloto.cs" />
     <Compile Include="negocio\NeTripulacion.cs" />
+    <Compile Include="negocio\NeComponente.cs" />
+    <Compile Include="negocio\NeMantenimientoAeronave.cs" />
+    <Compile Include="negocio\NeMantenimientoComponente.cs" />
     <Compile Include="negocio\NeVuelo.cs" />
     <Compile Include="vista\Form_Habilitar_Piloto.xaml.cs">
-      <DependentUpon>Form_Habilitar_Piloto.xaml</DependentUpon>
+    <DependentUpon>Form_Habilitar_Piloto.xaml</DependentUpon>
     </Compile>
     <Compile Include="vista\HabilitarPiloto.xaml.cs">
       <DependentUpon>HabilitarPiloto.xaml</DependentUpon>
     </Compile>
     <Compile Include="vista\Ingrear_vuelo_avion.xaml.cs">
-      <DependentUpon>Ingrear_vuelo_avion.xaml</DependentUpon>
+    <DependentUpon>Ingrear_vuelo_avion.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="vista\InsertMantenimientoAeronave.xaml.cs">
+      <DependentUpon>InsertMantenimientoAeronave.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="vista\Ingresar_aeronave.xaml.cs">
+      <DependentUpon>Ingresar_aeronave.xaml</DependentUpon>
+    </Compile>
+     <Compile Include="vista\MantenimientoComp.xaml.cs">
+      <DependentUpon>MantenimientoComp.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="vista\Mantenimientos.xaml.cs">
+      <DependentUpon>Mantenimientos.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="vista\ModificarMantenimientoAeronave.xaml.cs">
+      <DependentUpon>ModificarMantenimientoAeronave.xaml</DependentUpon>
     </Compile>
     <Compile Include="vista\Ingresar_Piloto.xaml.cs">
       <DependentUpon>Ingresar_Piloto.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="vista\Ingresar_aeronave_componente.xaml.cs">
+      <DependentUpon>Ingresar_aeronave_componente.xaml</DependentUpon>
     </Compile>
     <Compile Include="vista\Ingresar_vuelo.xaml.cs">
       <DependentUpon>Ingresar_vuelo.xaml</DependentUpon>
@@ -144,6 +171,30 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="vista\Ingrear_vuelo_avion.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="vista\InsertMantenimientoAeronave.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="vista\Ingresar_aeronave.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="vista\Ingresar_aeronave_componente.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="vista\MantenimientoComp.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="vista\Mantenimientos.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="vista\ModificarMantenimientoAeronave.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

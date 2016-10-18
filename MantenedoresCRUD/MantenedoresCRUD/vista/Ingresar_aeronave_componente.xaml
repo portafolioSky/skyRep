@@ -1,0 +1,46 @@
+﻿<Window x:Class="MantenedoresCRUD.vista.Ingresar_aeronave_componente"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:MantenedoresCRUD.vista"
+        mc:Ignorable="d"
+        Title="Ingresar_aeronave_componente" Height="392.333" Width="799" WindowStyle="None">
+    <Grid Background="#FF517E9C">
+        <Rectangle Fill="#FFF4F4F5" Height="331" Margin="10,43,10,0" Stroke="Black" VerticalAlignment="Top"/>
+        <Label x:Name="labelTitulo" Content="Ingresar componente" HorizontalAlignment="Left" Margin="10,5,0,0" VerticalAlignment="Top" FontSize="16" FontWeight="Medium" Foreground="White"/>
+        <GroupBox x:Name="groupBoxDatos" Header="Datos" HorizontalAlignment="Left" Margin="57,55,0,0" VerticalAlignment="Top" Height="268" Width="346"/>
+        <Label x:Name="labelNombre" Content="Nombre" HorizontalAlignment="Left" Margin="69,81,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="textBoxNombre" HorizontalAlignment="Left" Height="23" Margin="198,85,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
+        <Label x:Name="labelFechaVencimiento" Content="Fecha vencimiento" HorizontalAlignment="Left" Margin="69,112,0,0" VerticalAlignment="Top"/>
+        <DatePicker x:Name="fechaVencimiento" HorizontalAlignment="Left" Margin="198,113,0,0" VerticalAlignment="Top" Width="120"/>
+        <Label x:Name="labelFechaFabricacion" Content="Fecha fabricacion" HorizontalAlignment="Left" Margin="69,143,0,0" VerticalAlignment="Top"/>
+        <DatePicker x:Name="FechaFabricacion" HorizontalAlignment="Left" Margin="198,145,0,0" VerticalAlignment="Top" Width="120"/>
+        <Label x:Name="labelHorasVuelo" Content="Horas de vuelo" HorizontalAlignment="Left" Margin="69,174,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="textBoxHorasVuelo" HorizontalAlignment="Left" Height="23" Margin="198,177,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
+        <Label x:Name="labelLimite" Content="Limite horas de vuelo" HorizontalAlignment="Left" Margin="69,205,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="textBoxLimiteHoras" HorizontalAlignment="Left" Height="23" Margin="198,208,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
+        <Button x:Name="buttonIngresar" Content="Ingresar" HorizontalAlignment="Left" Margin="69,265,0,0" VerticalAlignment="Top" Width="90" Foreground="White" Height="34" Click="buttonIngresar_Click">
+            <Button.Background>
+                <SolidColorBrush Color="#FF8BABB9" Opacity="0.7"/>
+            </Button.Background>
+        </Button>
+        <Button x:Name="buttonCerrar" Content="X" HorizontalAlignment="Left" Margin="739,10,0,0" VerticalAlignment="Top" Width="32" Height="26" Click="buttonCerrar_Click" Background="#FF294A61" FontWeight="Bold" Foreground="White" BorderBrush="{x:Null}"/>
+        <GroupBox x:Name="groupBoxPAdre" Header="Seleccionar compontente al que pertenece" HorizontalAlignment="Left" Margin="408,55,0,0" VerticalAlignment="Top" Height="268" Width="363"/>
+        <DataGrid x:Name="dataGrid" HorizontalAlignment="Left" Margin="417,81,0,0" VerticalAlignment="Top" Height="218" Width="337" AutoGenerateColumns="False" IsReadOnly="True">
+            <DataGrid.Columns>
+                <DataGridTemplateColumn Header="Seleccion">
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <Button x:Name="buttonSeleccionar" Background="#FF33588D" Foreground="white" Focusable="False" Click="buttonSeleccionar_Click">Seleccionar</Button>
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+                <DataGridTextColumn Header="Nombre" Binding="{Binding Nombre}"/>
+                <DataGridTextColumn Header="Horas de Vuelo" Binding="{Binding HorasVuelo}"/>
+                <DataGridTextColumn Header="Pertenece" Binding="{Binding IdPadre}"/>
+            </DataGrid.Columns>
+        </DataGrid>
+
+    </Grid>
+</Window>

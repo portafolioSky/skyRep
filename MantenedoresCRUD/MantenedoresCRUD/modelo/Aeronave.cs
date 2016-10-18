@@ -12,7 +12,7 @@ namespace MantenedoresCRUD.modelo
         private string marca;
         private string modelo;
         private DateTime fechaFabricacion;
-        private DateTime horasVuelo;
+        private Double horasVuelo;
         private DateTime certificadoDgac;
         private DateTime vencimientoDgac;
         private string estadoAeronave;
@@ -71,7 +71,7 @@ namespace MantenedoresCRUD.modelo
             }
         }
 
-        public DateTime HorasVuelo
+        public Double HorasVuelo
         {
             get
             {

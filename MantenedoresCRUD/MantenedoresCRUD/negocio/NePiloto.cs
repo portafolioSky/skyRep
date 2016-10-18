@@ -70,5 +70,27 @@ namespace MantenedoresCRUD.negocio
             PilotoDao updateP = new PilotoDao();
             updateP.habilitarPiloto(piloto);
         }
+		
+		 public DataSet listarTodosPilotos(string tipo, string rut)
+        {
+
+            if (rut.Equals("")) rut = "%";
+            else rut = rut + "%";
+
+            string nombre = "%";
+
+            if (tipo.Equals("")) tipo = "%";
+            else tipo = tipo + "%";
+
+
+            PilotoDao pilotoDao = new PilotoDao();
+            return pilotoDao.listarTodosPilotos(tipo, rut, nombre);
+        }
+
+        public DataSet listarTipoPiloto()
+        {
+            PilotoDao piltoDao = new PilotoDao();
+            return piltoDao.listarTipoPiloto();
+        }
     }
 }

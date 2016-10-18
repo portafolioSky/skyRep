@@ -78,5 +78,7 @@ namespace MantenedoresCRUD.modelo
                 tipoLicencia = value;
             }
         }
+		
+	
     }
 }

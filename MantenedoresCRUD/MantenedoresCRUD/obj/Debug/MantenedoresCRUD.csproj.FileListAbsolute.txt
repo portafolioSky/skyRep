@@ -78,3 +78,17 @@ C:\Users\jose\Desktop\MantenedoresCRUD\MantenedoresCRUD\obj\Debug\MantenedoresCR
 C:\Users\jose\Desktop\MantenedoresCRUD\MantenedoresCRUD\obj\Debug\MantenedoresCRUD.csproj.GenerateResource.Cache
 C:\Users\jose\Desktop\MantenedoresCRUD\MantenedoresCRUD\obj\Debug\vista\Ingresar_Piloto.g.cs
 C:\Users\jose\Desktop\MantenedoresCRUD\MantenedoresCRUD\obj\Debug\vista\Ingresar_Piloto.baml
+C:\Users\Nacho_2\Desktop\MantenedoresCRUD\MantenedoresCRUD\obj\Debug\vista\InsertMantenimientoAeronave.g.cs
+C:\Users\Nacho_2\Desktop\MantenedoresCRUD\MantenedoresCRUD\obj\Debug\vista\MantenimientoComp.g.cs
+C:\Users\Nacho_2\Desktop\MantenedoresCRUD\MantenedoresCRUD\obj\Debug\vista\Mantenimientos.g.cs
+C:\Users\Nacho_2\Desktop\MantenedoresCRUD\MantenedoresCRUD\obj\Debug\vista\ModificarMantenimientoAeronave.g.cs
+C:\Users\Nacho_2\Desktop\MantenedoresCRUD\MantenedoresCRUD\obj\Debug\vista\Ingresar_Piloto.g.cs
+C:\Users\Nacho_2\Desktop\MantenedoresCRUD\MantenedoresCRUD\obj\Debug\vista\InsertMantenimientoAeronave.baml
+C:\Users\Nacho_2\Desktop\MantenedoresCRUD\MantenedoresCRUD\obj\Debug\vista\MantenimientoComp.baml
+C:\Users\Nacho_2\Desktop\MantenedoresCRUD\MantenedoresCRUD\obj\Debug\vista\Mantenimientos.baml
+C:\Users\Nacho_2\Desktop\MantenedoresCRUD\MantenedoresCRUD\obj\Debug\vista\ModificarMantenimientoAeronave.baml
+C:\Users\Nacho_2\Desktop\MantenedoresCRUD\MantenedoresCRUD\obj\Debug\vista\Ingresar_Piloto.baml
+C:\Users\Nacho_2\Desktop\MantenedoresCRUD\MantenedoresCRUD\obj\Debug\vista\Ingresar_aeronave.g.cs
+C:\Users\Nacho_2\Desktop\MantenedoresCRUD\MantenedoresCRUD\obj\Debug\vista\Ingresar_aeronave_componente.g.cs
+C:\Users\Nacho_2\Desktop\MantenedoresCRUD\MantenedoresCRUD\obj\Debug\vista\Ingresar_aeronave.baml
+C:\Users\Nacho_2\Desktop\MantenedoresCRUD\MantenedoresCRUD\obj\Debug\vista\Ingresar_aeronave_componente.baml

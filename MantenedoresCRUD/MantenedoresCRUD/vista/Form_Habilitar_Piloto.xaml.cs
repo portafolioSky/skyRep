@@ -68,10 +68,9 @@ namespace MantenedoresCRUD.vista
 
 
             if(fechaEmisionLicencia.SelectedDate.Value <= now)
-            {
                 imageLicenciaEmi.Source = new BitmapImage(new Uri(@"Resources/Correcto.png", UriKind.Relative));
-            }
-            
+            else imageLicenciaEmi.Source = null;
+
         }
 
         private void venLicencia_SelectedDateChanged(object sender, EventArgs e)
@@ -89,7 +88,11 @@ namespace MantenedoresCRUD.vista
                 {
                     imageLicenciaVen.Source = new BitmapImage(new Uri(@"Resources/Correcto.png", UriKind.Relative));
                 }
-                else MessageBox.Show("Vencimiento debe tener una vigencia min de un año");
+
+                else {
+                    MessageBox.Show("Vencimiento debe tener una vigencia min de un año");
+                    imageLicenciaVen.Source = null;
+                     }
             }
 
         }
@@ -101,9 +104,9 @@ namespace MantenedoresCRUD.vista
 
 
             if (fechaVencMedicina.SelectedDate.Value > now)
-            {
                 imageMEdicinaVEn.Source = new BitmapImage(new Uri(@"Resources/Correcto.png", UriKind.Relative));
-            }
+            else imageMEdicinaVEn.Source = null;
+
 
         }
 

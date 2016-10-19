@@ -147,5 +147,33 @@ namespace MantenedoresCRUD.dao
             }
             return ds;
         }
+
+        public int piloto_Insert(Usuario persona)
+        {
+            conn.Open();
+            int resp = new int();
+            OracleCommand ora_cmd = new OracleCommand(conn.getUsuario() + "PILOTO_INGRESAR", conn.Cnn);
+            ora_cmd.BindByName = true;
+            ora_cmd.CommandType = CommandType.StoredProcedure;
+
+            ora_cmd.Parameters.Add("P_rut", OracleDbType.Varchar2, persona.Rut, ParameterDirection.Input);
+            ora_cmd.Parameters.Add("P_nombre", OracleDbType.Varchar2, persona.Nombre, ParameterDirection.Input);
+            ora_cmd.Parameters.Add("P_ap_paterno", OracleDbType.Varchar2, persona.ApPaterno, ParameterDirection.Input);
+            ora_cmd.Parameters.Add("P_ap_materno", OracleDbType.Varchar2, persona.ApMaterno, ParameterDirection.Input);
+            ora_cmd.Parameters.Add("P_user", OracleDbType.Varchar2, persona.User, ParameterDirection.Input);
+            ora_cmd.Parameters.Add("P_pass", OracleDbType.Varchar2, persona.Password, ParameterDirection.Input);
+            ora_cmd.Parameters.Add("P_correo", OracleDbType.Varchar2, persona.Correo, ParameterDirection.Input);
+            ora_cmd.Parameters.Add("P_vencMedicina", OracleDbType.Date, persona.FechaMeAeroespacial, ParameterDirection.Input);
+            ora_cmd.Parameters.Add("l_tipoLicencia", OracleDbType.Int16, persona.Licencia.TipoLicencia, ParameterDirection.Input);
+            ora_cmd.Parameters.Add("l_emisLicencia", OracleDbType.Date, persona.Licencia.FechaEmision, ParameterDirection.Input);
+            ora_cmd.Parameters.Add("l_vencLicencia", OracleDbType.Date, persona.Licencia.FechaExpiracion, ParameterDirection.Input);
+            ora_cmd.Parameters.Add("l_estadoLicencia", OracleDbType.Char, persona.Licencia.Estado1, ParameterDirection.Input);
+            ora_cmd.Parameters.Add("resp", OracleDbType.Int16, ParameterDirection.Output);
+            ora_cmd.ExecuteNonQuery();
+            resp = int.Parse(ora_cmd.Parameters["resp"].Value.ToString());
+
+            conn.Close();
+            return resp;
+        }
     }
 }

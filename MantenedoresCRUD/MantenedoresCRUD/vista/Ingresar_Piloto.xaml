@@ -5,8 +5,8 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:MantenedoresCRUD.vista"
         mc:Ignorable="d"
-        Title="Ingresar_Piloto" Height="528" Width="500" Background="Transparent" WindowStartupLocation="CenterScreen" ResizeMode="NoResize" WindowStyle="None" AllowsTransparency="True" Icon="../skyicon.ico">
-    <Grid Background="#FF1F4F6E" MouseLeftButtonDown="DockPanel_MouseLeftButtonDown" Height="528" VerticalAlignment="Top">
+        Title="Ingresar_Piloto" Height="606" Width="500" Background="Transparent" WindowStartupLocation="CenterScreen" ResizeMode="NoResize" WindowStyle="None" AllowsTransparency="True" Icon="../skyicon.ico">
+    <Grid Background="#FF1F4F6E" MouseLeftButtonDown="DockPanel_MouseLeftButtonDown" Height="606" VerticalAlignment="Top">
         <Grid.ColumnDefinitions>
             <ColumnDefinition/>
         </Grid.ColumnDefinitions>
@@ -15,31 +15,33 @@
             <RowDefinition Height="74*"/>
             <RowDefinition Height="453*"/>
         </Grid.RowDefinitions>
-        <Rectangle Fill="#FFF5F5FF" Height="472" Margin="10,45,0,0" Stroke="White" VerticalAlignment="Top" Grid.RowSpan="3" HorizontalAlignment="Left" Width="480"/>
+        <Rectangle Fill="#FFF5F5FF" Height="543" Margin="10,50,0,0" Stroke="White" VerticalAlignment="Top" Grid.RowSpan="3" HorizontalAlignment="Left" Width="480"/>
         <Image x:Name="image" HorizontalAlignment="Left" Height="71" Margin="10,0,0,0" Grid.Row="1" VerticalAlignment="Top" Width="172" Source="Resources/sky logo.png"/>
         <Label x:Name="label1" Content="Ingresar Piloto" HorizontalAlignment="Left" Margin="10,14,0,0" VerticalAlignment="Top" FontSize="16" FontWeight="Medium" Foreground="White" Height="31" Width="115"/>
         <Button x:Name="buttonCancel" Content="Cancelar" HorizontalAlignment="Left" Margin="426,19,0,0" Grid.Row="1" VerticalAlignment="Top" Width="53" Height="32" Background="{x:Null}" Click="buttonCancel_Click"/>
-        <GroupBox x:Name="groupBox3" Header="Ingresar Pilotos" HorizontalAlignment="Left" Margin="26,10,0,0" Grid.Row="2" VerticalAlignment="Top" Height="304" Width="453"/>
-        <Label x:Name="labelHorasDespegue"  HorizontalAlignment="Left" Margin="370,157,0,0" Grid.Row="2" VerticalAlignment="Top" FontWeight="Medium" Foreground="#FF7D84CB" Height="10" Width="10"/>
-        <Label x:Name="labelHoraArribo"  HorizontalAlignment="Left" Margin="370,219,0,0" Grid.Row="2" VerticalAlignment="Top" FontWeight="Medium" Foreground="#FF7D84CB" Height="10" Width="10"/>
+        <GroupBox x:Name="groupBox3" Header="Ingresar Pilotos" HorizontalAlignment="Left" Margin="26,10,0,0" Grid.Row="2" VerticalAlignment="Top" Height="365" Width="453"/>
         <Label  Content="Rut piloto:" HorizontalAlignment="Left" Grid.Row="2" VerticalAlignment="Top" Height="26" Width="93" Margin="39,38,0,0"/>
         <Label  Content="Nombre piloto:" HorizontalAlignment="Left" Grid.Row="2" VerticalAlignment="Top" Height="26" Width="93" Margin="39,67,0,0"/>
         <Label  Content="Apellido Paterno:" HorizontalAlignment="Left" Grid.Row="2" VerticalAlignment="Top" Height="26" Width="175" Margin="39,97,0,0"/>
         <Label  Content="Apellido Materno:" HorizontalAlignment="Left" Grid.Row="2" VerticalAlignment="Top" Height="26" Width="175" Margin="39,125,0,0"/>
-        <Label  Content="Correo (E-Mail):" HorizontalAlignment="Left" Grid.Row="2" VerticalAlignment="Top" Height="26" Width="93" Margin="39,156,0,0"/>
+        <Label  Content="Correo (E-Mail):" HorizontalAlignment="Left" Grid.Row="2" VerticalAlignment="Top" Height="26" Width="93" Margin="39,211,0,0"/>
         <TextBox x:Name="textBoxRut" HorizontalAlignment="Left" Height="23" Margin="241,41,0,0" Grid.Row="2" TextWrapping="Wrap" VerticalAlignment="Top" Width="176"/>
         <TextBox x:Name="textBoxNombre" HorizontalAlignment="Left" Height="23" Margin="241,70,0,0" Grid.Row="2" TextWrapping="Wrap" VerticalAlignment="Top" Width="176"/>
         <TextBox x:Name="textBoxAPaterno" HorizontalAlignment="Left" Height="23" Margin="241,100,0,0" Grid.Row="2" TextWrapping="Wrap" VerticalAlignment="Top" Width="176"/>
         <TextBox x:Name="textBoxAMaterno" HorizontalAlignment="Left" Height="23" Margin="241,129,0,0" Grid.Row="2" TextWrapping="Wrap" VerticalAlignment="Top" Width="176"/>
-        <TextBox x:Name="textBoxCorreo" HorizontalAlignment="Left" Height="23" Margin="241,159,0,0" Grid.Row="2" TextWrapping="Wrap" VerticalAlignment="Top" Width="176"/>
-        <Label  Content="Fecha Venc Medicina Aeroespacial:" HorizontalAlignment="Left" Margin="39,188,0,0" Grid.Row="2" VerticalAlignment="Top"/>
-        <Label  Content="Tipo Licencia:" HorizontalAlignment="Left" Margin="39,216,0,0" Grid.Row="2" VerticalAlignment="Top"/>
-        <Label  Content="Fecha Emision:" HorizontalAlignment="Left" Margin="39,248,0,0" Grid.Row="2" VerticalAlignment="Top"/>
-        <Label  Content="Fecha Vencimiento:" HorizontalAlignment="Left" Margin="39,277,0,0" Grid.Row="2" VerticalAlignment="Top"/>
-        <DatePicker HorizontalAlignment="Left" Margin="241,189,0,0" Grid.Row="2" VerticalAlignment="Top" Width="176"/>
-        <DatePicker HorizontalAlignment="Left" Margin="241,248,0,0" Grid.Row="2" VerticalAlignment="Top" Width="176"/>
-        <DatePicker HorizontalAlignment="Left" Margin="241,277,0,0" Grid.Row="2" VerticalAlignment="Top" Width="176"/>
-        <ComboBox x:Name="comboBoxTipoLicencia" HorizontalAlignment="Left" Margin="241,219,0,0" Grid.Row="2" VerticalAlignment="Top" Width="176"/>
-        <Button x:Name="buttonAceptar" Content="Aceptar" HorizontalAlignment="Left" Margin="223,342,0,0" Grid.Row="2" VerticalAlignment="Top" Width="75"/>
+        <TextBox x:Name="textBoxCorreo" HorizontalAlignment="Left" Height="24" Margin="241,213,0,0" Grid.Row="2" TextWrapping="Wrap" VerticalAlignment="Top" Width="176"/>
+        <Label  Content="Fecha Venc Medicina Aeroespacial:" HorizontalAlignment="Left" Margin="39,243,0,0" Grid.Row="2" VerticalAlignment="Top"/>
+        <Label  Content="Tipo Licencia:" HorizontalAlignment="Left" Margin="39,271,0,0" Grid.Row="2" VerticalAlignment="Top"/>
+        <Label  Content="Fecha Emision:" HorizontalAlignment="Left" Margin="39,303,0,0" Grid.Row="2" VerticalAlignment="Top"/>
+        <Label  Content="Fecha Vencimiento:" HorizontalAlignment="Left" Margin="39,331,0,0" Grid.Row="2" VerticalAlignment="Top"/>
+        <DatePicker x:Name="fechaVecnMedicina" HorizontalAlignment="Left" Margin="241,243,0,0" Grid.Row="2" VerticalAlignment="Top" Width="176"/>
+        <DatePicker x:Name="fechaEmisionLicencia" HorizontalAlignment="Left" Margin="241,303,0,0" Grid.Row="2" VerticalAlignment="Top" Width="176"/>
+        <DatePicker x:Name="fechaVenclicencia" HorizontalAlignment="Left" Margin="241,331,0,0" Grid.Row="2" VerticalAlignment="Top" Width="176"/>
+        <ComboBox x:Name="comboBoxTipoLicencia" HorizontalAlignment="Left" Margin="241,273,0,0" Grid.Row="2" VerticalAlignment="Top" Width="176"/>
+        <Button x:Name="buttonAceptar" Content="Aceptar" HorizontalAlignment="Left" Margin="218,400,0,0" Grid.Row="2" VerticalAlignment="Top" Width="75" Click="buttonAceptar_Click"/>
+        <TextBox x:Name="textBoxUser" HorizontalAlignment="Left" Height="23" Margin="241,157,0,0" Grid.Row="2" TextWrapping="Wrap" VerticalAlignment="Top" Width="176"/>
+        <TextBox x:Name="textBoxPassword" HorizontalAlignment="Left" Height="23" Margin="241,185,0,0" Grid.Row="2" TextWrapping="Wrap" VerticalAlignment="Top" Width="176"/>
+        <Label Content="Nombre Usuario:" HorizontalAlignment="Left" Margin="39,151,0,0" Grid.Row="2" VerticalAlignment="Top" Width="178"/>
+        <Label Content="Password:" HorizontalAlignment="Left" Margin="39,182,0,0" Grid.Row="2" VerticalAlignment="Top" Width="175"/>
     </Grid>
 </Window>

@@ -20,6 +20,7 @@ namespace MantenedoresCRUD.modelo
         private LicenciaPiloto licencia;
 
 
+
         public Usuario() { }
         public Usuario(string rut,String nombre, String apPaterno, String apMaterno, String user, String password, String correo, RolUsuario rolUsuario) {
             this.rut = rut;

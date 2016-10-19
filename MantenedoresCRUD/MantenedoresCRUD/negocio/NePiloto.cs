@@ -92,5 +92,20 @@ namespace MantenedoresCRUD.negocio
             PilotoDao piltoDao = new PilotoDao();
             return piltoDao.listarTipoPiloto();
         }
+
+
+        public int ingresarPiloto(Usuario piloto)
+        {
+            PilotoDao insertP = new PilotoDao();
+
+            byte[] data = Encoding.ASCII.GetBytes(piloto.Password);
+            data = new System.Security.Cryptography.SHA256Managed().ComputeHash(data);
+            string hash = Encoding.ASCII.GetString(data);
+
+            piloto.Password = hash;
+            piloto.Licencia.Estado1 = 't';
+
+            return insertP.piloto_Insert(piloto);
+        }
     }
 }

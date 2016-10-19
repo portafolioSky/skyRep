@@ -164,7 +164,7 @@ namespace MantenedoresCRUD.dao
             ora_cmd.Parameters.Add("P_pass", OracleDbType.Varchar2, persona.Password, ParameterDirection.Input);
             ora_cmd.Parameters.Add("P_correo", OracleDbType.Varchar2, persona.Correo, ParameterDirection.Input);
             ora_cmd.Parameters.Add("P_vencMedicina", OracleDbType.Date, persona.FechaMeAeroespacial, ParameterDirection.Input);
-            ora_cmd.Parameters.Add("l_tipoLicencia", OracleDbType.Int16, persona.Licencia.TipoLicencia, ParameterDirection.Input);
+            ora_cmd.Parameters.Add("l_tipoLicencia", OracleDbType.Int16, persona.Licencia.TipoLicencia.IdTipoLIcencia, ParameterDirection.Input);
             ora_cmd.Parameters.Add("l_emisLicencia", OracleDbType.Date, persona.Licencia.FechaEmision, ParameterDirection.Input);
             ora_cmd.Parameters.Add("l_vencLicencia", OracleDbType.Date, persona.Licencia.FechaExpiracion, ParameterDirection.Input);
             ora_cmd.Parameters.Add("l_estadoLicencia", OracleDbType.Char, persona.Licencia.Estado1, ParameterDirection.Input);

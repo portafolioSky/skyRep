@@ -14,6 +14,7 @@ using System.Windows.Shapes;
 using MantenedoresCRUD.modelo;
 using System.Data;
 using MantenedoresCRUD.negocio;
+using System.Globalization;
 
 namespace MantenedoresCRUD.vista
 {
@@ -48,5 +49,25 @@ namespace MantenedoresCRUD.vista
         {
             this.Close();
         }
+
+        private void buttonAceptar_Click(object sender, RoutedEventArgs e)
+        {
+            
+            piloto = new Usuario();
+            piloto.Rut = textBoxRut.Text;
+            piloto.Nombre = CultureInfo.CurrentCulture.TextInfo.ToTitleCase(textBoxNombre.Text);
+            piloto.ApPaterno = CultureInfo.CurrentCulture.TextInfo.ToTitleCase(textBoxAPaterno.Text);
+            piloto.ApMaterno = CultureInfo.CurrentCulture.TextInfo.ToTitleCase(textBoxAMaterno.Text);
+            piloto.Correo = textBoxCorreo.Text;
+            piloto.User = textBoxUser.Text;
+            piloto.Password = textBoxPassword.Text;
+            piloto.FechaMeAeroespacial = Convert.ToDateTime(fechaVecnMedicina.SelectedDate.ToString());
+            piloto.Licencia.FechaEmision = Convert.ToDateTime(fechaEmisionLicencia.SelectedDate.ToString());
+            piloto.Licencia.FechaExpiracion = Convert.ToDateTime(fechaVenclicencia.SelectedDate.ToString());
+            piloto.Licencia.TipoLicencia.IdTipoLIcencia = Convert.ToInt16(comboBoxTipoLicencia.SelectedValue.ToString());
+            int n = nePiloto.ingresarPiloto(piloto);
+        }
+
+       
     }
 }

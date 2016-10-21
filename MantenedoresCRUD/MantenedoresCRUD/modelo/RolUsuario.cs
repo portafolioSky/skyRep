@@ -10,15 +10,13 @@ namespace MantenedoresCRUD.modelo
     {
         private int id_rol;
         private string nombre;
-        private string descripcion;
 
         public RolUsuario() { }
 
-        public RolUsuario(int id_rol, string nombre, string descripcion)
+        public RolUsuario(int id_rol, string nombre)
         {
             this.id_rol = id_rol;
             this.nombre = nombre;
-            this.descripcion = descripcion;
         }
 
         public int Id_rol
@@ -47,17 +45,6 @@ namespace MantenedoresCRUD.modelo
             }
         }
 
-        public string Descripcion
-        {
-            get
-            {
-                return descripcion;
-            }
 
-            set
-            {
-                descripcion = value;
-            }
-        }
     }
 }

@@ -83,20 +83,24 @@
     <Compile Include="modelo\Tripulacion.cs" />
     <Compile Include="modelo\Vuelo.cs" />
     <Compile Include="negocio\NeAeronave.cs" />
+    <Compile Include="negocio\NePerfil.cs" />
     <Compile Include="negocio\NePiloto.cs" />
     <Compile Include="negocio\NeTripulacion.cs" />
     <Compile Include="negocio\NeComponente.cs" />
     <Compile Include="negocio\NeMantenimientoAeronave.cs" />
     <Compile Include="negocio\NeMantenimientoComponente.cs" />
     <Compile Include="negocio\NeVuelo.cs" />
+    <Compile Include="vista\Cambio_pass.xaml.cs">
+      <DependentUpon>Cambio_pass.xaml</DependentUpon>
+    </Compile>
     <Compile Include="vista\Form_Habilitar_Piloto.xaml.cs">
-    <DependentUpon>Form_Habilitar_Piloto.xaml</DependentUpon>
+      <DependentUpon>Form_Habilitar_Piloto.xaml</DependentUpon>
     </Compile>
     <Compile Include="vista\HabilitarPiloto.xaml.cs">
       <DependentUpon>HabilitarPiloto.xaml</DependentUpon>
     </Compile>
     <Compile Include="vista\Ingrear_vuelo_avion.xaml.cs">
-    <DependentUpon>Ingrear_vuelo_avion.xaml</DependentUpon>
+      <DependentUpon>Ingrear_vuelo_avion.xaml</DependentUpon>
     </Compile>
     <Compile Include="vista\InsertMantenimientoAeronave.xaml.cs">
       <DependentUpon>InsertMantenimientoAeronave.xaml</DependentUpon>
@@ -104,7 +108,7 @@
     <Compile Include="vista\Ingresar_aeronave.xaml.cs">
       <DependentUpon>Ingresar_aeronave.xaml</DependentUpon>
     </Compile>
-     <Compile Include="vista\MantenimientoComp.xaml.cs">
+    <Compile Include="vista\MantenimientoComp.xaml.cs">
       <DependentUpon>MantenimientoComp.xaml</DependentUpon>
     </Compile>
     <Compile Include="vista\Mantenimientos.xaml.cs">
@@ -155,13 +159,17 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="dao\MantenedorPersona.cs" />
-    <Compile Include="dao\MantenerdorPerfil.cs" />
+    <Compile Include="dao\UsuarioDao.cs" />
+    <Compile Include="dao\PerfilDao.cs" />
     <Compile Include="dataBase\Data.cs" />
     <Compile Include="MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="vista\Cambio_pass.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="vista\Form_Habilitar_Piloto.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>

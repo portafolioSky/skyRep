@@ -9,12 +9,12 @@ namespace MantenedoresCRUD.modelo
     public class Usuario
     {
         private string rut;
-        private String nombre;
-        private String apPaterno;
-        private String apMaterno;
-        private String user;
-        private String password;
-        private String correo;
+        private string nombre;
+        private string apPaterno;
+        private string apMaterno;
+        private string user;
+        private string password;
+        private string correo;
         private RolUsuario rolUsuario;
         private DateTime fechaMeAeroespacial;
         private LicenciaPiloto licencia;
@@ -22,26 +22,27 @@ namespace MantenedoresCRUD.modelo
 
 
         public Usuario() { }
-        public Usuario(string rut,String nombre, String apPaterno, String apMaterno, String user, String password, String correo, RolUsuario rolUsuario) {
+        public Usuario(string rut,string nombre, string apPaterno, string apMaterno, string user, string correo, RolUsuario rolUsuario) {
             this.rut = rut;
             this.nombre = nombre;
             this.apPaterno = apPaterno;
             this.apMaterno = apMaterno;
             this.user = user;
-            this.password = password;
             this.correo = correo;
             this.rolUsuario = rolUsuario;
         }
 
-        public Usuario(string rut, String nombre, String apPaterno, String apMaterno, String user, String correo, RolUsuario rolUsuario)
+        public Usuario(string rut, string nombre, string apPaterno, string apMaterno, string user, string correo, string rolUsuario)
         {
+
             this.rut = rut;
             this.nombre = nombre;
             this.apPaterno = apPaterno;
             this.apMaterno = apMaterno;
             this.user = user;
             this.correo = correo;
-            this.rolUsuario = rolUsuario;
+            this.rolUsuario = new RolUsuario();
+            this.rolUsuario.Nombre = rolUsuario;
         }
 
         public Usuario(string rut)
@@ -162,7 +163,7 @@ namespace MantenedoresCRUD.modelo
 
         public override string ToString()
         {
-            return Rut + " " + Nombre + " " + ApPaterno + " "+ ApMaterno +" " + Correo + " " + RolUsuario;
+            return Rut + " " + Nombre + " " + ApPaterno + " "+ ApMaterno +" " + Correo + " "+ User + " " + RolUsuario.Nombre;
         }
 
         public string NombreCompleto()

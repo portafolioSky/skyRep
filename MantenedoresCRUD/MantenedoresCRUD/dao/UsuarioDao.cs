@@ -60,26 +60,28 @@ namespace MantenedoresCRUD.dao
 
        
         //Insertar persona
-        public static int sqlInsertarPersona(Usuario persona)
+        public  int sqlInsertarPersona(Usuario persona)
         {
+            conn.Open();
             int resp = new int();
-            OracleCommand ora_cmd = new OracleCommand(conn.getUsuario() + "PRO_INGRESAR_PERSONA", conn.Cnn);
+            OracleCommand ora_cmd = new OracleCommand(conn.getUsuario() + "USUARIO_INGRESAR", conn.Cnn);
             ora_cmd.BindByName = true;
             ora_cmd.CommandType = CommandType.StoredProcedure;
 
-            ora_cmd.Parameters.Add("rut", OracleDbType.Varchar2, persona.Rut, ParameterDirection.Input);
-            ora_cmd.Parameters.Add("nombre", OracleDbType.Varchar2, persona.Nombre, ParameterDirection.Input);
-            ora_cmd.Parameters.Add("ap_paterno", OracleDbType.Varchar2, persona.ApPaterno, ParameterDirection.Input);
-            ora_cmd.Parameters.Add("ap_materno", OracleDbType.Varchar2, persona.ApMaterno, ParameterDirection.Input);
-            ora_cmd.Parameters.Add("user", OracleDbType.Varchar2, persona.User, ParameterDirection.Input);
-            ora_cmd.Parameters.Add("password", OracleDbType.Varchar2, persona.Password, ParameterDirection.Input);
-            ora_cmd.Parameters.Add("correo", OracleDbType.Varchar2, persona.Correo, ParameterDirection.Input);
-            ora_cmd.Parameters.Add("id_rol", OracleDbType.Varchar2, persona.RolUsuario, ParameterDirection.Input);
+            ora_cmd.Parameters.Add("P_rut", OracleDbType.Varchar2, persona.Rut, ParameterDirection.Input);
+            ora_cmd.Parameters.Add("P_nombre", OracleDbType.Varchar2, persona.Nombre, ParameterDirection.Input);
+            ora_cmd.Parameters.Add("P_ap_paterno", OracleDbType.Varchar2, persona.ApPaterno, ParameterDirection.Input);
+            ora_cmd.Parameters.Add("P_ap_materno", OracleDbType.Varchar2, persona.ApMaterno, ParameterDirection.Input);
+            ora_cmd.Parameters.Add("P_user", OracleDbType.Varchar2, persona.User, ParameterDirection.Input);
+            ora_cmd.Parameters.Add("P_pass", OracleDbType.Varchar2, persona.Password, ParameterDirection.Input);
+            ora_cmd.Parameters.Add("P_correo", OracleDbType.Varchar2, persona.Correo, ParameterDirection.Input);
+            ora_cmd.Parameters.Add("P_rol", OracleDbType.Int16, persona.RolUsuario.Id_rol, ParameterDirection.Input);
             ora_cmd.Parameters.Add("resp", OracleDbType.Int16, ParameterDirection.Output);
 
             ora_cmd.ExecuteNonQuery();
             resp = int.Parse(ora_cmd.Parameters["resp"].Value.ToString());
 
+            conn.Close();
             return resp;
         }
 

@@ -127,6 +127,15 @@ namespace MantenedoresCRUD.vista
 
             ds = neUsuario.getUsuario(usuario);
             dataGridUsuario.ItemsSource = new DataView(ds.Tables["usuarioLista"]);
+            textBoxIngresarRut.Text = "";
+            textBoxIngresarNombre.Text = "";
+            textBoxIngresarApPaterno.Text = "";
+            textBoxIngresarApMaterno.Text = "";
+            textBoxIngresarCorreo.Text = "";
+            textBoxIngresarUsuario.Text = "";
+            passwordBoxIngresar.Password = "";
+            passwordBoxIngresar2.Password = "";
+            comboBoxIngresarRol.Text = "";
 
         }
 
@@ -274,5 +283,59 @@ namespace MantenedoresCRUD.vista
                     break;
             }
         }
+
+        private void buttoonIngresarUsuario_Click(object sender, RoutedEventArgs e)
+        {
+
+            try {
+                Usuario usuarioIngresar = new Usuario();
+                usuario.Rut = textBoxIngresarRut.Text;
+                usuario.Nombre = CultureInfo.CurrentCulture.TextInfo.ToTitleCase(textBoxIngresarNombre.Text);
+                usuario.ApPaterno = CultureInfo.CurrentCulture.TextInfo.ToTitleCase(textBoxIngresarApPaterno.Text);
+                usuario.ApMaterno = CultureInfo.CurrentCulture.TextInfo.ToTitleCase(textBoxIngresarApMaterno.Text);
+                usuario.Correo = (textBoxIngresarCorreo.Text).ToLower();
+                usuario.User = (textBoxIngresarNombre.Text).ToLower();
+                usuario.RolUsuario.Id_rol = Convert.ToInt16(comboBoxIngresarRol.SelectedValue.ToString());
+                usuario.RolUsuario.Nombre = comboBoxIngresarRol.Text;
+                usuario.Password = passwordBoxIngresar.Password;
+                string pass2 = passwordBoxIngresar2.Password;
+
+                int resp = neUsuario.ingresarUsuario(usuario, pass2);
+
+                switch (resp)
+                {
+                    case -1:
+                        MessageBox.Show("El rut ingresado ya se encuentra ingresado");
+                        break;
+                    case -2:
+                        MessageBox.Show("Complete todos los datos solicitados");
+                        break;
+                    case -3:
+                        MessageBox.Show("Las credenciales proporcionadas no coinciden");
+                        break;
+                    case -4:
+                        MessageBox.Show("Rut invalido");
+                        break;
+                    case 0:
+                        MessageBox.Show("Usuario ingresado con exito");
+                        gridIngresar.Visibility = Visibility.Hidden;
+                        gridEliminar.Visibility = Visibility.Hidden;
+                        ds = neUsuario.getUsuario(usuario);
+                        dataGridUsuario.ItemsSource = new DataView(ds.Tables["usuarioLista"]);
+                        textBoxIngresarRut.Text = "";
+                        textBoxIngresarNombre.Text = "";
+                        textBoxIngresarApPaterno.Text = "";
+                        textBoxIngresarApMaterno.Text = "";
+                        textBoxIngresarCorreo.Text = "";
+                        textBoxIngresarUsuario.Text = "";
+                        passwordBoxIngresar.Password = "";
+                        passwordBoxIngresar2.Password = "";
+                        comboBoxIngresarRol.Text = "";
+                        break;
+                }
+            }
+            catch (Exception) { }
+        }
+
     }
 }

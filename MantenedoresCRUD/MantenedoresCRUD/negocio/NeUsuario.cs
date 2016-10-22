@@ -73,5 +73,57 @@ namespace MantenedoresCRUD.negocio
              UsuarioDao daoUsuario = new UsuarioDao();
             return daoUsuario.UpdatePersona(usuario);
         }
+
+        public int ingresarUsuario(Usuario usuario, string pass)
+        {
+            if (usuario.Rut == "" ||  usuario.Nombre == "" || usuario.ApMaterno == "" || usuario.ApPaterno == "" || usuario.Correo == "" || 
+                usuario.RolUsuario.Id_rol == 0 || usuario.User == "" || usuario.Password == "" || pass == "")
+                return -2;
+
+            if (usuario.Password != pass)
+                return -3;
+
+            if (!validarRut(usuario.Rut))
+                return -4;
+
+            byte[] data = Encoding.ASCII.GetBytes(usuario.Password);
+            data = new System.Security.Cryptography.SHA256Managed().ComputeHash(data);
+            string hash = Encoding.ASCII.GetString(data);
+            usuario.Password = hash;
+      
+            UsuarioDao daoUsuario = new UsuarioDao();
+            return daoUsuario.sqlInsertarPersona(usuario);
+
+        }
+
+
+        public bool validarRut(string rut)
+        {
+
+            bool validacion = false;
+            try
+            {
+                rut = rut.ToUpper();
+                rut = rut.Replace(".", "");
+                rut = rut.Replace("-", "");
+                int rutAux = int.Parse(rut.Substring(0, rut.Length - 1));
+
+                char dv = char.Parse(rut.Substring(rut.Length - 1, 1));
+
+                int m = 0, s = 1;
+                for (; rutAux != 0; rutAux /= 10)
+                {
+                    s = (s + rutAux % 10 * (9 - m++ % 6)) % 11;
+                }
+                if (dv == (char)(s != 0 ? s + 47 : 75))
+                {
+                    validacion = true;
+                }
+            }
+            catch (Exception)
+            {
+            }
+            return validacion;
+        }
     }
 }

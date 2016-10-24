@@ -1,0 +1,38 @@
+﻿<Window x:Class="MantenedoresCRUD.vista.Ingresar_aeronave_componentes_nuevo"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:MantenedoresCRUD.vista"
+        mc:Ignorable="d"
+        Title="Ingresar_aeronave_componentes_nuevo" Height="253" Width="653" WindowStyle="None">
+    <Grid Background="#FF517E9C" Margin="0,0,0,2">
+        <Rectangle Fill="#FFF4F4F5" Margin="10,39,10,10" Stroke="Black"/>
+        <Label x:Name="labelTitulo" Content="Nuevo componente" HorizontalAlignment="Left" Margin="10,0,0,0" VerticalAlignment="Top" FontSize="16" FontWeight="Medium" Foreground="White"/>
+        <Label x:Name="labelNombre" Content="Nombre" HorizontalAlignment="Left" Margin="21,52,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="textBoxNombre" HorizontalAlignment="Left" Height="23" Margin="174,55,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
+        <Label x:Name="labelhorasVuelo" Content="Horas de vuelo" HorizontalAlignment="Left" Margin="21,83,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="textBoxHorasVuelo" HorizontalAlignment="Left" Height="23" Margin="174,86,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
+        <Label x:Name="labelLimiteHoras" Content="Limite de horas de vuelo" HorizontalAlignment="Left" Margin="21,114,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="textBoxLimiteHoras" HorizontalAlignment="Left" Height="23" Margin="174,117,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
+        <Label x:Name="labelVencimiento" Content="Fecha vencimiento" HorizontalAlignment="Left" Margin="21,145,0,0" VerticalAlignment="Top"/>
+        <DatePicker x:Name="datePickerFechaVencimiento" HorizontalAlignment="Left" Margin="174,147,0,0" VerticalAlignment="Top" Width="120"/>
+        <Button x:Name="buttonAgregar" Content="Agregar" HorizontalAlignment="Left" Margin="21,185,0,0" VerticalAlignment="Top" Width="75" Click="buttonAgregar_Click"/>
+        <Label x:Name="labelPadre" Content="Si el componente pertenece a otro, seleccionelo aquí" HorizontalAlignment="Left" Margin="328,52,0,0" VerticalAlignment="Top"/>
+        <DataGrid x:Name="dataGridComponentePadre" HorizontalAlignment="Left" Margin="337,78,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.167,-3.308" Height="127" Width="281" IsReadOnly="True" AutoGenerateColumns="False">
+            <DataGrid.Columns>
+                <DataGridTemplateColumn Header="Seleccion">
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <Button x:Name="buttonSeleccionar" Background="#FF33588D" Foreground="white" Focusable="False" Click="buttonSeleccionar_Click">Seleccionar</Button>
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+                <DataGridTextColumn Header="Id" Binding="{Binding Id Componente}" />
+                <DataGridTextColumn Header="Nombre" Binding="{Binding Nombre}" />
+                <DataGridTextColumn Header="Horas de vuelo" Binding="{Binding Horas de vuelo}" />
+                <DataGridTextColumn Header="Id padre" Binding="{Binding Componente Padre}" />
+            </DataGrid.Columns>
+        </DataGrid>
+    </Grid>
+</Window>

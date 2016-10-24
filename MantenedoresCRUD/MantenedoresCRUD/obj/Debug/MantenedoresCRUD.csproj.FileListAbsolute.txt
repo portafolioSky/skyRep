@@ -105,7 +105,6 @@ C:\Users\Nacho_2\Desktop\MantenedoresCRUD\MantenedoresCRUD\obj\Debug\vista\Habil
 C:\Users\Nacho_2\Desktop\MantenedoresCRUD\MantenedoresCRUD\obj\Debug\vista\Ingrear_vuelo_avion.g.cs
 C:\Users\Nacho_2\Desktop\MantenedoresCRUD\MantenedoresCRUD\obj\Debug\vista\InsertMantenimientoAeronave.g.cs
 C:\Users\Nacho_2\Desktop\MantenedoresCRUD\MantenedoresCRUD\obj\Debug\vista\Ingresar_aeronave.g.cs
-C:\Users\Nacho_2\Desktop\MantenedoresCRUD\MantenedoresCRUD\obj\Debug\vista\Ingresar_aeronave_componente.g.cs
 C:\Users\Nacho_2\Desktop\MantenedoresCRUD\MantenedoresCRUD\obj\Debug\vista\MantenimientoComp.g.cs
 C:\Users\Nacho_2\Desktop\MantenedoresCRUD\MantenedoresCRUD\obj\Debug\vista\Mantenimientos.g.cs
 C:\Users\Nacho_2\Desktop\MantenedoresCRUD\MantenedoresCRUD\obj\Debug\vista\ModificarMantenimientoAeronave.g.cs
@@ -129,7 +128,6 @@ C:\Users\Nacho_2\Desktop\MantenedoresCRUD\MantenedoresCRUD\obj\Debug\vista\Habil
 C:\Users\Nacho_2\Desktop\MantenedoresCRUD\MantenedoresCRUD\obj\Debug\vista\Ingrear_vuelo_avion.baml
 C:\Users\Nacho_2\Desktop\MantenedoresCRUD\MantenedoresCRUD\obj\Debug\vista\InsertMantenimientoAeronave.baml
 C:\Users\Nacho_2\Desktop\MantenedoresCRUD\MantenedoresCRUD\obj\Debug\vista\Ingresar_aeronave.baml
-C:\Users\Nacho_2\Desktop\MantenedoresCRUD\MantenedoresCRUD\obj\Debug\vista\Ingresar_aeronave_componente.baml
 C:\Users\Nacho_2\Desktop\MantenedoresCRUD\MantenedoresCRUD\obj\Debug\vista\MantenimientoComp.baml
 C:\Users\Nacho_2\Desktop\MantenedoresCRUD\MantenedoresCRUD\obj\Debug\vista\Mantenimientos.baml
 C:\Users\Nacho_2\Desktop\MantenedoresCRUD\MantenedoresCRUD\obj\Debug\vista\ModificarMantenimientoAeronave.baml
@@ -149,3 +147,11 @@ C:\Users\Nacho_2\Desktop\MantenedoresCRUD\MantenedoresCRUD\obj\Debug\Mantenedore
 C:\Users\Nacho_2\Desktop\MantenedoresCRUD\MantenedoresCRUD\obj\Debug\MantenedoresCRUD.exe
 C:\Users\Nacho_2\Desktop\MantenedoresCRUD\MantenedoresCRUD\obj\Debug\MantenedoresCRUD.pdb
 C:\Users\Nacho_2\Desktop\MantenedoresCRUD\MantenedoresCRUD\obj\Debug\MantenedoresCRUD.csprojResolveAssemblyReference.cache
+C:\Users\Nacho_2\Desktop\MantenedoresCRUD\MantenedoresCRUD\obj\Debug\vista\Ingresar_aeronave_componentes.g.cs
+C:\Users\Nacho_2\Desktop\MantenedoresCRUD\MantenedoresCRUD\obj\Debug\vista\Ingresar_aeronave_componentes_nuevo.g.cs
+C:\Users\Nacho_2\Desktop\MantenedoresCRUD\MantenedoresCRUD\obj\Debug\vista\InsertMantenimientoComponente.g.cs
+C:\Users\Nacho_2\Desktop\MantenedoresCRUD\MantenedoresCRUD\obj\Debug\vista\ModificarMantenimientoComponente.g.cs
+C:\Users\Nacho_2\Desktop\MantenedoresCRUD\MantenedoresCRUD\obj\Debug\vista\Ingresar_aeronave_componentes.baml
+C:\Users\Nacho_2\Desktop\MantenedoresCRUD\MantenedoresCRUD\obj\Debug\vista\Ingresar_aeronave_componentes_nuevo.baml
+C:\Users\Nacho_2\Desktop\MantenedoresCRUD\MantenedoresCRUD\obj\Debug\vista\InsertMantenimientoComponente.baml
+C:\Users\Nacho_2\Desktop\MantenedoresCRUD\MantenedoresCRUD\obj\Debug\vista\ModificarMantenimientoComponente.baml

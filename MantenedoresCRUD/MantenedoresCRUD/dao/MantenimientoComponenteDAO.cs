@@ -50,7 +50,36 @@ namespace MantenedoresCRUD.dao
                 conn.Close();
             }
         }
-
-
+        public void IngresarMantenimientoComponente(MantenimientoComponente mantComp)
+        {
+            if (conn.Open())
+            {
+                OracleCommand ora_cmd = new OracleCommand(conn.getUsuario() + "INSERT_MANT_COMP", conn.Cnn);
+                ora_cmd.BindByName = true;
+                ora_cmd.CommandType = CommandType.StoredProcedure;
+                ora_cmd.Parameters.Add("mc_idComp", OracleDbType.Varchar2, mantComp.IdComponente, ParameterDirection.Input);
+                ora_cmd.Parameters.Add("mc_fecha", OracleDbType.Date, mantComp.FechaInspeccion, ParameterDirection.Input);
+                ora_cmd.Parameters.Add("mc_estado", OracleDbType.Varchar2, mantComp.Estado, ParameterDirection.Input);
+                ora_cmd.Parameters.Add("mc_encargado", OracleDbType.Varchar2, mantComp.RutEncargado, ParameterDirection.Input);
+                ora_cmd.ExecuteNonQuery();
+                conn.Close();
+            }
+        }
+        public void ModificarMantenimientoComponente(MantenimientoComponente mantComp)
+        {
+            if (conn.Open())
+            {
+                OracleCommand ora_cmd = new OracleCommand(conn.getUsuario() + "UPDATE_MANT_COMP", conn.Cnn);
+                ora_cmd.BindByName = true;
+                ora_cmd.CommandType = CommandType.StoredProcedure;
+                ora_cmd.Parameters.Add("var_idMantComp", OracleDbType.Int16, mantComp.IdMantenimiento, ParameterDirection.Input);
+                ora_cmd.Parameters.Add("var_idComp", OracleDbType.Int16, mantComp.IdComponente, ParameterDirection.Input);
+                ora_cmd.Parameters.Add("var_fechaInspeccion", OracleDbType.Date, mantComp.FechaInspeccion, ParameterDirection.Input);
+                ora_cmd.Parameters.Add("var_estado", OracleDbType.Varchar2, mantComp.Estado, ParameterDirection.Input);
+                ora_cmd.Parameters.Add("var_rutEncargado", OracleDbType.Varchar2, mantComp.RutEncargado, ParameterDirection.Input);
+                ora_cmd.ExecuteNonQuery();
+                conn.Close();
+            }
+        }
     }
 }

@@ -32,11 +32,13 @@ namespace MantenedoresCRUD.vista
         private Aeronave aeronave = new Aeronave();
         private DataSet ds;
         private DataSet dsMant;
-        
-     
+   
+
+
+
         public Mantenimientos()
         {
-       
+           
             InitializeComponent();
             neAeronave = new NeAeronave();
             neMantenimiento = new NeMantenimientoAeronave();
@@ -46,6 +48,7 @@ namespace MantenedoresCRUD.vista
             comboBoxTipoAeronave.DisplayMemberPath = "NOMBRE_TIPO";
             comboBoxTipoAeronave.SelectedValuePath = "NOMBRE_TIPO";
             comboBoxTipoAeronave.ItemsSource = ds.Tables["listaTipoAeronave"].DefaultView;
+
         }
 
         private void comboBoxTipoAeronave_SelectionChanged(object sender, SelectionChangedEventArgs e)
@@ -53,9 +56,9 @@ namespace MantenedoresCRUD.vista
 
             ds = new DataSet();
             aeronave = new Aeronave();
-            string matricula = textBoxMatricula.Text;
+            //string matricula = textBoxMatricula.Text;
             string tipo = comboBoxTipoAeronave.SelectedValue.ToString();
-            aeronave.Matricula = matricula;
+            aeronave.Matricula = "";
             aeronave.TipoAeronave.NombreTipo = tipo;
             ds = neAeronave.getAeronave(aeronave);
             dataGridListaNave.ItemsSource = null;
@@ -64,30 +67,29 @@ namespace MantenedoresCRUD.vista
         }
        
 
-        private void textBoxMatricula_TextChanged(object sender, TextChangedEventArgs e)
-        {
-            aeronave = new Aeronave();
-            string matricula = textBoxMatricula.Text;
-            string tipo = comboBoxTipoAeronave.Text;
-            aeronave.Matricula = matricula;
-            aeronave.TipoAeronave.NombreTipo = tipo;
-            ds = neAeronave.getAeronave(aeronave);
-            dataGridListaNave.ItemsSource = new DataView(ds.Tables["listaAeronaves"]);
-            buttonBuscar.IsEnabled = true;  
-        }
-
-        private void buttonBuscar_Click(object sender, RoutedEventArgs e)
-        {
-            dsMant = new DataSet();
-            aeronave = new Aeronave();
-            string matricula = textBoxMatricula.Text;
-            aeronave.Matricula = matricula;
-            dsMant = neMantenimiento.getMantenimientos(aeronave);
-            ds = neAeronave.getAeronave(aeronave);
-            dataGridListaNave.ItemsSource = new DataView(ds.Tables["listaAeronaves"]);
-            dataGridMant.ItemsSource = new DataView(dsMant.Tables["listaMantenimientos"]);
-            groupBoxMant.Header = "Mantenimientos " + matricula;
-        }
+        //private void textBoxMatricula_TextChanged(object sender, TextChangedEventArgs e)
+        //{
+        //    aeronave = new Aeronave();
+        //    string matricula = textBoxMatricula.Text;
+        //    string tipo = comboBoxTipoAeronave.Text;
+        //    aeronave.Matricula = matricula;
+        //    aeronave.TipoAeronave.NombreTipo = tipo;
+        //    ds = neAeronave.getAeronave(aeronave);
+        //    dataGridListaNave.ItemsSource = new DataView(ds.Tables["listaAeronaves"]);
+        //    buttonBuscar.IsEnabled = true;  
+        //}
+        //private void buttonBuscar_Click(object sender, RoutedEventArgs e)
+        //{
+        //    dsMant = new DataSet();
+        //    aeronave = new Aeronave();
+        //    string matricula = textBoxMatricula.Text;
+        //    aeronave.Matricula = matricula;
+        //    dsMant = neMantenimiento.getMantenimientos(aeronave);
+        //    ds = neAeronave.getAeronave(aeronave);
+        //    dataGridListaNave.ItemsSource = new DataView(ds.Tables["listaAeronaves"]);
+        //    dataGridMant.ItemsSource = new DataView(dsMant.Tables["listaMantenimientos"]);
+        //    groupBoxMant.Header = "Mantenimientos " + matricula;
+        //}
 
         private void dataGridListaNave_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
@@ -110,6 +112,8 @@ namespace MantenedoresCRUD.vista
                     buttonIngresarMantenimiento.IsEnabled = true;
                     buttonMantComponentes.IsEnabled=true;
                 }
+                buttonBorrarMantenimiento.IsEnabled = false;
+                buttonModificarMantenimiento.IsEnabled = false;
             }
         }
 
@@ -122,6 +126,7 @@ namespace MantenedoresCRUD.vista
 
         private void dataGridMant_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
+
             buttonBorrarMantenimiento.IsEnabled = true;  
             buttonModificarMantenimiento.IsEnabled = true;
         }
@@ -130,6 +135,8 @@ namespace MantenedoresCRUD.vista
         {
             InsertMantenimientoAeronave insert = new InsertMantenimientoAeronave();
             insert.ShowDialog();
+            dsMant = neMantenimiento.getMantenimientos(aeronave);
+            dataGridMant.ItemsSource = new DataView(dsMant.Tables["listaMantenimientos"]);
         }
 
         private void buttonBorrarMantenimiento_Click(object sender, RoutedEventArgs e)
@@ -152,8 +159,35 @@ namespace MantenedoresCRUD.vista
 
         private void buttonModificarMantenimiento_Click(object sender, RoutedEventArgs e)
         {
+            
+            DataRowView data = null;
+            dsMant = new DataSet();
+            MantenimientoAeronave mantNave = new MantenimientoAeronave();
+            NeMantenimientoAeronave neMantenimientoAeronave = new NeMantenimientoAeronave();
+            data = (DataRowView)dataGridMant.SelectedItems[0];
+            string id = data["Id"].ToString();
+            int idMant = int.Parse(id);
+            Sesion.SetValue("idMant", idMant);
             ModificarMantenimientoAeronave modificar = new ModificarMantenimientoAeronave();
             modificar.ShowDialog();
+            dsMant = neMantenimiento.getMantenimientos(aeronave);
+            dataGridMant.ItemsSource = new DataView(dsMant.Tables["listaMantenimientos"]);
+            buttonBorrarMantenimiento.IsEnabled = false;
+            buttonModificarMantenimiento.IsEnabled = false;
+        }
+
+        private void buttonCerrar_Click(object sender, RoutedEventArgs e)
+        {
+            this.Close();
+        }
+
+        private void button_Click(object sender, RoutedEventArgs e)
+        {
+            this.Close();
+        }
+        private void DockPanel_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
+        {
+            this.DragMove();
         }
     }
 }

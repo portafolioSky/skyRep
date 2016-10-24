@@ -1,7 +1,6 @@
 ﻿using MantenedoresCRUD.modelo;
 using MantenedoresCRUD.negocio;
 using System;
-using System.Collections;
 using System.Collections.Generic;
 using System.Data;
 using System.Linq;
@@ -16,76 +15,58 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 
-
 namespace MantenedoresCRUD.vista
 {
     /// <summary>
-    /// Lógica de interacción para InsertMantenimientoAeronave.xaml
+    /// Lógica de interacción para InsertMantenimientoComponente.xaml
     /// </summary>
-    public partial class InsertMantenimientoAeronave : Window
+    public partial class InsertMantenimientoComponente : Window
     {
-        private string matricula;
-        private MantenimientoAeronave mantNave;
-        private NeMantenimientoAeronave neMantenimientoAeronave = new NeMantenimientoAeronave();
+        private int idComp;
+        private MantenimientoComponente mantComp = new MantenimientoComponente();
+        private NeMantenimientoComponente neMantenimientoComponete = new NeMantenimientoComponente();
         private DataSet ds;
         private NeUsuario neUsuario;
-        
 
-
-        public InsertMantenimientoAeronave()
+        public InsertMantenimientoComponente()
         {
-            
             InitializeComponent();
             fechaInspeccion.SelectedDate = DateTime.Now.Date;
-            matricula = Sesion.GetValue<string>("Matricula");
-            textBoxMatricula.Text = matricula;
+            idComp = Sesion.GetValue<int>("idComp");
+            textBoxIdComp.Text = idComp.ToString();
             neUsuario = new NeUsuario();
             ds = new DataSet();
             ds = neUsuario.getOperadores();
             comboBoxEncargado.DisplayMemberPath = "NOMBRE";
             comboBoxEncargado.SelectedValuePath = "RUT";
             comboBoxEncargado.ItemsSource = ds.Tables["operadores"].DefaultView;
-            
-            
-            
         }
 
         private void buttonIngresarMantenimiento_Click(object sender, RoutedEventArgs e)
         {
-            
-          
-            mantNave = new MantenimientoAeronave();
-            neMantenimientoAeronave = new NeMantenimientoAeronave();
+            neMantenimientoComponete = new NeMantenimientoComponente();
             DateTime fechaSelect = new DateTime();
             fechaSelect = fechaInspeccion.SelectedDate.Value;
-            mantNave.Matricula = matricula;
-            mantNave.Ispecccion = fechaSelect;
-            mantNave.Estado = textBoxEstado.Text;
+            mantComp.IdComponente = idComp;
+            mantComp.FechaInspeccion = fechaSelect;
+            mantComp.Estado = textBoxEstado.Text;
             if (comboBoxEncargado.Text == "Seleccione Operador")
             {
                 MessageBox.Show("Seleccione un un operador");
             }
             else
             {
-                mantNave.RutUsuario = comboBoxEncargado.SelectedValue.ToString();
+
+                mantComp.RutEncargado = comboBoxEncargado.SelectedValue.ToString();
                 MessageBox.Show("Mantenimiento Ingresado");
-                neMantenimientoAeronave.insertMantenimientoAeronave(mantNave);
+                neMantenimientoComponete.insertMantenimientoComponente(mantComp);
                 this.Close();
             }
-           
-            //if (mantNave.Ispecccion < DateTime.Now)
-            //  {
-            //    MessageBox.Show("Seleccione una fecha mayor a la actual");
-            //  }
-            //else
-            //  {
-               
-              //}         
         }
-
         private void buttonCerrar_Click(object sender, RoutedEventArgs e)
         {
             this.Close();
         }
     }
 }
+

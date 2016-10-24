@@ -125,5 +125,11 @@ namespace MantenedoresCRUD.negocio
             }
             return validacion;
         }
+		
+		  public DataSet getOperadores()
+        {
+            UsuarioDao usuario = new UsuarioDao();
+            return usuario.obtenerOperadores();
+        }
     }
 }

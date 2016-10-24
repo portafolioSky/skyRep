@@ -11,11 +11,11 @@ namespace MantenedoresCRUD.modelo
         private int idMantenimiento;
         private DateTime ispecccion;
         private string estado;
-        private Usuario rutUsuario;
-        private Aeronave matricula;
+        private string rutUsuario;
+        private string matricula;
 
         public MantenimientoAeronave() { }
-        public MantenimientoAeronave(int idMantenimiento, DateTime ispecccion, string estado, Usuario rutUsuario, Aeronave matricula)
+        public MantenimientoAeronave(int idMantenimiento, DateTime ispecccion, string estado, string rutUsuario, string matricula)
         {
             this.IdMantenimiento = idMantenimiento;
             this.Ispecccion = ispecccion;
@@ -63,7 +63,7 @@ namespace MantenedoresCRUD.modelo
             }
         }
 
-        public Usuario RutUsuario
+        public string RutUsuario
         {
             get
             {
@@ -76,7 +76,7 @@ namespace MantenedoresCRUD.modelo
             }
         }
 
-        public Aeronave Matricula
+        public string Matricula
         {
             get
             {

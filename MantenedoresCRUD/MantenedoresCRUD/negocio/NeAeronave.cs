@@ -46,10 +46,16 @@ namespace MantenedoresCRUD.negocio
             return aeronave.ListarTodasAeronaves(nave);
         }
 
-        public int insertAeronave(Aeronave nave)
+        public void insertAeronave(Aeronave nave)
         {
             AeronaveDao adao = new AeronaveDao();
-            return adao.IngresarAeronave(nave);
+            adao.IngresarAeronave(nave);
+        }
+
+        public int aeronaveExiste(Aeronave nave)
+        {
+            AeronaveDao adao = new AeronaveDao();
+            return adao.aeronave_existe(nave);
         }
 
 

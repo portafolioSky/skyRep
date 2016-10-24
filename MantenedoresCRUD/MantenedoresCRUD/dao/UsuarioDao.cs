@@ -22,6 +22,22 @@ namespace MantenedoresCRUD.dao
             conn = Data.getInstance();
         }
 
+        public DataSet obtenerOperadores()
+        {
+            DataSet ds = new DataSet();
+            if (conn.Open() == true)
+            {
+                OracleCommand oraCmd = new OracleCommand(conn.getUsuario() + "GET_OPERADORES", conn.Cnn);
+                oraCmd.BindByName = true;
+                oraCmd.CommandType = CommandType.StoredProcedure;
+                oraCmd.Parameters.Add("p_recordset", OracleDbType.RefCursor, ParameterDirection.Output);
+                oraCmd.ExecuteNonQuery();
+                OracleDataAdapter ad = new OracleDataAdapter(oraCmd);
+                ad.Fill(ds, "operadores", (OracleRefCursor)(oraCmd.Parameters["p_recordset"].Value));
+                conn.Close();
+            }
+            return ds;
+        }
 
         //Login usuario
         public int Ingresar(Usuario persona)

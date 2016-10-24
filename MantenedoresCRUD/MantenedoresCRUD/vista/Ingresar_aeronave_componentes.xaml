@@ -1,0 +1,32 @@
+﻿<Window x:Class="MantenedoresCRUD.vista.Ingresar_aeronave_componentes"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:MantenedoresCRUD.vista"
+        mc:Ignorable="d"
+        Title="Ingresar_aeronave_componentes" Height="454.319" Width="396.681" WindowStyle="None">
+    <Grid Background="#FF517E9C" Margin="0,0,2,2">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="273*"/>
+            <ColumnDefinition Width="18*"/>
+            <ColumnDefinition Width="89*"/>
+        </Grid.ColumnDefinitions>
+        <Rectangle Fill="#FFF4F4F5" Margin="10,36,10,10" Stroke="Black" Grid.ColumnSpan="3"/>
+        <Label x:Name="labelTitulo" Content="Ingresar aeronave - componentes" HorizontalAlignment="Left" Margin="10,0,0,0" VerticalAlignment="Top" FontSize="16" FontWeight="Medium" Foreground="White"/>
+        <DataGrid x:Name="dataGridComponentes" HorizontalAlignment="Left" Margin="24,144,0,0" VerticalAlignment="Top" Height="218" Width="330" Grid.ColumnSpan="3" IsReadOnly="True" SourceUpdated="dataGridComponentes_SourceUpdated" AutoGenerateColumns="False">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Id" Binding="{Binding Id Componente}" />
+                <DataGridTextColumn Header="Nombre" Binding="{Binding Nombre}" />
+                <DataGridTextColumn Header="Horas de vuelo" Binding="{Binding Horas de vuelo}" />
+                <DataGridTextColumn Header="Fecha vencimiento" Binding="{Binding Fecha Vencimiento}" />
+                <DataGridTextColumn Header="Id padre" Binding="{Binding Componente Padre}" />
+            </DataGrid.Columns>
+        </DataGrid>
+        <Label x:Name="labelPaso" Content="Paso 2 - Ingresar componentes" HorizontalAlignment="Left" Margin="24,45,0,0" VerticalAlignment="Top"/>
+        <Button x:Name="buttonAgregarComponente" Content="Agregar" HorizontalAlignment="Left" Margin="24,119,0,0" VerticalAlignment="Top" Width="75" Click="buttonAgregarComponente_Click"/>
+        <Label x:Name="labelListado" Content="Componenten ingresados" HorizontalAlignment="Left" Margin="24,88,0,0" VerticalAlignment="Top"/>
+        <Button x:Name="buttonListo" Content="Listo" HorizontalAlignment="Left" Margin="24,367,0,0" VerticalAlignment="Top" Width="75" Click="buttonListo_Click"/>
+
+    </Grid>
+</Window>

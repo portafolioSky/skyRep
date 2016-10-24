@@ -18,22 +18,22 @@ using System.Windows.Shapes;
 namespace MantenedoresCRUD.vista
 {
     /// <summary>
-    /// Lógica de interacción para ModificarMantenimientoAeronave.xaml
+    /// Lógica de interacción para ModificarMantenimientoComponente.xaml
     /// </summary>
-    public partial class ModificarMantenimientoAeronave : Window
+    public partial class ModificarMantenimientoComponente : Window
     {
-        private string matricula;
-        private MantenimientoAeronave mantNave = new MantenimientoAeronave();
-        private NeMantenimientoAeronave neMantenimientoAeronave = new NeMantenimientoAeronave();
+        private int idComp;
+        private MantenimientoComponente mantComp = new MantenimientoComponente();
+        private NeMantenimientoComponente neMantenimientoComponente = new NeMantenimientoComponente();
         private DataSet ds;
         private NeUsuario neUsuario;
-        private int idMant = 0;
-        public ModificarMantenimientoAeronave()
+        private int idMantComp;
+        public ModificarMantenimientoComponente()
         {
             InitializeComponent();
             fechaInspeccion.SelectedDate = DateTime.Now.Date;
-            matricula = Sesion.GetValue<string>("Matricula");
-            textBoxMatricula.Text = matricula;
+            idComp = Sesion.GetValue<int>("idComp");
+            textBoxIdComponente.Text = idComp.ToString();
             neUsuario = new NeUsuario();
             ds = new DataSet();
             ds = neUsuario.getOperadores();
@@ -43,7 +43,6 @@ namespace MantenedoresCRUD.vista
             comboBoxEstado.Items.Add(new Item("PROGRAMADO", 1));
             comboBoxEstado.Items.Add(new Item("REALIZADO", 2));
         }
-
         private void buttonCerrar_Click(object sender, RoutedEventArgs e)
         {
             this.Close();
@@ -51,23 +50,23 @@ namespace MantenedoresCRUD.vista
 
         private void buttonModificarMantenimiento_Click(object sender, RoutedEventArgs e)
         {
-            idMant = Sesion.GetValue<int>("idMant");
-            neMantenimientoAeronave = new NeMantenimientoAeronave();
+            idMantComp = Sesion.GetValue<int>("idMantComp");
+            neMantenimientoComponente = new NeMantenimientoComponente();
             DateTime fechaSelect = new DateTime();
             fechaSelect = fechaInspeccion.SelectedDate.Value;
-            mantNave.IdMantenimiento = idMant;
-            mantNave.Matricula = matricula;
-            mantNave.Ispecccion = fechaSelect;
-            mantNave.Estado = comboBoxEstado.SelectedValue.ToString();
+            mantComp.IdMantenimiento = idMantComp;
+            mantComp.IdComponente = idComp;
+            mantComp.FechaInspeccion = fechaSelect;
+            mantComp.Estado = comboBoxEstado.SelectedValue.ToString();
             if (comboBoxEncargado.Text == "Seleccione Operador")
             {
                 MessageBox.Show("Seleccione un un operador");
             }
             else
             {
-                mantNave.RutUsuario = comboBoxEncargado.SelectedValue.ToString();
+                mantComp.RutEncargado = comboBoxEncargado.SelectedValue.ToString();
                 MessageBox.Show("Mantenimiento Modificado");
-                neMantenimientoAeronave.updateMantenimientoAeronave(mantNave);
+                neMantenimientoComponente.updateMantenimientoAeronave(mantComp);
                 this.Close();
             }
         }

@@ -5,24 +5,43 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:MantenedoresCRUD.vista"
         mc:Ignorable="d"
-        Title="Mantenimientos" Height="622.759" Width="797.931" WindowStartupLocation="CenterScreen">
-    <Grid Margin="0,0,0,-21">
-        <GroupBox x:Name="groupBox" Header="Seleccione Aeronave" HorizontalAlignment="Left" Margin="10,82,0,0" VerticalAlignment="Top" Height="96" Width="232"/>
-        <ComboBox x:Name="comboBoxTipoAeronave" HorizontalAlignment="Left" Margin="26,112,0,0" VerticalAlignment="Top" Width="120" SelectionChanged="comboBoxTipoAeronave_SelectionChanged" />
-        <TextBox x:Name="textBoxMatricula" HorizontalAlignment="Left" Height="24" Margin="26,138,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="120"/>
-        <Button x:Name="buttonBuscar" Content="Buscar" HorizontalAlignment="Left" Margin="151,112,0,0" VerticalAlignment="Top" Width="75" Height="50" Click="buttonBuscar_Click" IsEnabled="False"/>
-        <DataGrid x:Name="dataGridListaNave" HorizontalAlignment="Left" Margin="26,198,0,0" VerticalAlignment="Top" Height="143" Width="743" IsReadOnly="True" SelectionChanged="dataGridListaNave_SelectionChanged" />
-        <GroupBox x:Name="groupBox1" Header="Aeronaves" HorizontalAlignment="Left" Margin="10,178,0,0" VerticalAlignment="Top" Height="179" Width="774" />
-        <Label x:Name="labelDemo" Content="" HorizontalAlignment="Left" Margin="342,112,0,0" VerticalAlignment="Top" Width="161"/>
-        <DataGrid x:Name="dataGridMant" HorizontalAlignment="Left" Margin="26,378,0,0" VerticalAlignment="Top" IsReadOnly="True" Height="182" Width="344" SelectionChanged="dataGridMant_SelectionChanged" />
-        <GroupBox x:Name="groupBoxMant" Header="Mantenimientos de Aeronave :" HorizontalAlignment="Left" Margin="10,357,0,0" VerticalAlignment="Top" Height="223" Width="373"/>
-        <Button x:Name="buttonMantComponentes" Content="Mantenimientos de Componentes" HorizontalAlignment="Left" Margin="255,118,0,0" VerticalAlignment="Top" Width="187" Height="30" Click="buttonMantComponentes_Click" IsEnabled="False"/>
-        <GroupBox x:Name="groupBoxComponentes" Header="Componentes Aeronave " HorizontalAlignment="Left" Margin="242,82,0,0" VerticalAlignment="Top" Height="96" Width="209"/>
-        <Button x:Name="buttonIngresarMantenimiento" Content="Ingresar Mantenimiento" HorizontalAlignment="Left" Margin="509,396,0,0" VerticalAlignment="Top" Width="152" Height="37" IsEnabled="False" Click="buttonIngresarMantenimiento_Click"/>
-        <Button x:Name="buttonBorrarMantenimiento" Content="Borrar Mantenimiento" HorizontalAlignment="Left" Margin="509,501,0,0" VerticalAlignment="Top" Width="152" Height="37" IsEnabled="False" Click="buttonBorrarMantenimiento_Click"/>
-        <Button x:Name="buttonModificarMantenimiento" Content="Modificar Mantenimiento" HorizontalAlignment="Left" Margin="509,448,0,0" VerticalAlignment="Top" Width="152" Height="37" IsEnabled="False" Click="buttonModificarMantenimiento_Click"/>
-        <GroupBox x:Name="groupBoxControlMantenimientos" Header="Control de Mantenimientos" HorizontalAlignment="Left" Margin="403,357,0,0" VerticalAlignment="Top" Height="223" Width="381"/>
+        Title="Mantenimientos" Height="712.259" Width="788.931"  Background="Transparent" WindowStartupLocation="CenterScreen" ResizeMode="NoResize" WindowStyle="None" AllowsTransparency="True" Icon="../skyicon.ico">
 
+
+    <Grid Background="#FF517E9C" MouseLeftButtonDown="DockPanel_MouseLeftButtonDown">
+        <Rectangle Fill="#FFF5F5FF" HorizontalAlignment="Left" Height="651" Stroke="White" VerticalAlignment="Top" Width="769" Margin="10,49,0,0"/>
+        <Button x:Name="buttonCerrar" Content="X" HorizontalAlignment="Left" Margin="735,5,0,0" VerticalAlignment="Top" Width="44" Height="39" Background="#FF294A61" FontWeight="Bold" Foreground="White" BorderBrush="{x:Null}" Click="buttonCerrar_Click"/>
+        <Image x:Name="image" HorizontalAlignment="Left" Height="70" Margin="26,68,0,0" VerticalAlignment="Top" Width="172" Source="Resources/sky logo.png"/>
+        <Label x:Name="label1" Content="MANTENIMIENTOS" HorizontalAlignment="Left" Margin="10,8,0,0" VerticalAlignment="Top" FontSize="16" FontWeight="Medium" Foreground="White"/>
+        <GroupBox x:Name="groupBox" Header="Seleccione Aeronave" HorizontalAlignment="Left" Margin="50,219,0,0" VerticalAlignment="Top" Height="63" Width="151"/>
+        <ComboBox x:Name="comboBoxTipoAeronave" HorizontalAlignment="Left" Margin="68,243,0,0" VerticalAlignment="Top" Width="120" SelectionChanged="comboBoxTipoAeronave_SelectionChanged" />
+        <DataGrid x:Name="dataGridListaNave" HorizontalAlignment="Left" Margin="68,306,0,0" VerticalAlignment="Top" Height="146" Width="652" IsReadOnly="True" SelectionChanged="dataGridListaNave_SelectionChanged" />
+        <GroupBox x:Name="groupBox1" Header="Aeronaves" HorizontalAlignment="Left" Margin="50,287,0,0" VerticalAlignment="Top" Height="179" Width="688" />
+        <DataGrid x:Name="dataGridMant" HorizontalAlignment="Left" Margin="26,500,0,0" VerticalAlignment="Top" IsReadOnly="True" Height="182" Width="385" SelectionChanged="dataGridMant_SelectionChanged" />
+        <GroupBox x:Name="groupBoxMant" Header="Mantenimientos de Aeronave :" HorizontalAlignment="Left" Margin="10,471,0,0" VerticalAlignment="Top" Height="223" Width="417"/>
+        <Button x:Name="buttonMantComponentes" Content="Mantenimientos de Componentes" HorizontalAlignment="Left" Margin="240,243,0,0" VerticalAlignment="Top" Width="187" Height="22" Foreground="White" Click="buttonMantComponentes_Click" IsEnabled="False">
+            <Button.Background>
+                <SolidColorBrush Color="#FF8BABB9" Opacity="0.7"/>
+            </Button.Background>
+        </Button>
+        <GroupBox x:Name="groupBoxComponentes" Header="Componentes Aeronave " HorizontalAlignment="Left" Margin="218,219,0,0" VerticalAlignment="Top" Height="63" Width="231"/>
+        <Button x:Name="buttonIngresarMantenimiento" Content="Ingresar Mantenimiento" HorizontalAlignment="Left" Margin="546,516,0,0" VerticalAlignment="Top" Width="152" Height="36" IsEnabled="False" Foreground="White" Click="buttonIngresarMantenimiento_Click">
+            <Button.Background>
+                <SolidColorBrush Color="#FF8BABB9" Opacity="0.7"/>
+            </Button.Background>
+        </Button>
+        <Button x:Name="buttonBorrarMantenimiento" Content="Borrar Mantenimiento" HorizontalAlignment="Left" Margin="546,620,0,0" VerticalAlignment="Top" Width="152" Height="38" IsEnabled="False" Foreground="White" Click="buttonBorrarMantenimiento_Click">
+            <Button.Background>
+                <SolidColorBrush Color="#FF8BABB9" Opacity="0.7"/>
+            </Button.Background>
+        </Button>
+        <Button x:Name="buttonModificarMantenimiento" Content="Modificar Mantenimiento" HorizontalAlignment="Left" Margin="546,568,0,0" VerticalAlignment="Top" Width="152" Height="36" IsEnabled="False" Foreground="White" Click="buttonModificarMantenimiento_Click">
+            <Button.Background>
+                <SolidColorBrush Color="#FF8BABB9" Opacity="0.7"/>
+            </Button.Background>
+        </Button>
+        <GroupBox x:Name="groupBoxControlMantenimientos" Header="Control de Mantenimientos" HorizontalAlignment="Left" Margin="432,471,0,0" VerticalAlignment="Top" Height="224" Width="347"/>
+        <Button x:Name="buttonVolver" Content="Volver" HorizontalAlignment="Left" Margin="706,68,0,0" VerticalAlignment="Top" Width="52" Height="31" Background="{x:Null}" Click="button_Click"/>
 
 
 

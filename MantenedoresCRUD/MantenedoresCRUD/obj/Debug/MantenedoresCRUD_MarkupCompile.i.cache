@@ -10,11 +10,11 @@ none
 false
 DEBUG;TRACE
 C:\Users\Nacho_2\Desktop\MantenedoresCRUD\MantenedoresCRUD\App.xaml
-211592473437
+24761517062
 
-63-1250862584
+67-1357050784
 16-1487359077
-MainWindow.xaml;vista\Cambio_pass.xaml;vista\Form_Habilitar_Piloto.xaml;vista\HabilitarPiloto.xaml;vista\Ingrear_vuelo_avion.xaml;vista\InsertMantenimientoAeronave.xaml;vista\Ingresar_aeronave.xaml;vista\Ingresar_aeronave_componente.xaml;vista\MantenimientoComp.xaml;vista\Mantenimientos.xaml;vista\ModificarMantenimientoAeronave.xaml;vista\Ingresar_Piloto.xaml;vista\Ingresar_vuelo.xaml;vista\Ingresar_Vuelo_Pilotos.xaml;vista\Modulo_Administrador.xaml;vista\Modulo_Consultor.xaml;vista\Modulo_Operador.xaml;vista\Modulo_Piloto.xaml;vista\Seleccion_Tripulacion.xaml;vista\VerLicencia.xaml;vista\Vuelo_Resumen.xaml;
+MainWindow.xaml;vista\Cambio_pass.xaml;vista\Form_Habilitar_Piloto.xaml;vista\HabilitarPiloto.xaml;vista\Ingrear_vuelo_avion.xaml;vista\InsertMantenimientoAeronave.xaml;vista\Ingresar_aeronave_componentes.xaml;vista\Ingresar_aeronave.xaml;vista\Ingresar_aeronave_componentes_nuevo.xaml;vista\InsertMantenimientoComponente.xaml;vista\MantenimientoComp.xaml;vista\Mantenimientos.xaml;vista\ModificarMantenimientoAeronave.xaml;vista\Ingresar_Piloto.xaml;vista\Ingresar_vuelo.xaml;vista\Ingresar_Vuelo_Pilotos.xaml;vista\ModificarMantenimientoComponente.xaml;vista\Modulo_Administrador.xaml;vista\Modulo_Consultor.xaml;vista\Modulo_Operador.xaml;vista\Modulo_Piloto.xaml;vista\Seleccion_Tripulacion.xaml;vista\VerLicencia.xaml;vista\Vuelo_Resumen.xaml;
 
-True
+False
 

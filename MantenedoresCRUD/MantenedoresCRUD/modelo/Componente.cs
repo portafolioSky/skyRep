@@ -11,13 +11,11 @@ namespace MantenedoresCRUD.modelo
         private string nombre;
         private int idComponente;
         private DateTime fechaVencimiento;
-        private DateTime fechaFabricacion;
         private string matriculaAeronave;
         private float horasVuelo;
         private int idPadre;
         private float limiteHorasVuelo;
         private string estado;
-        private Componente hijo;
 
 
         public Componente() { }
@@ -123,19 +121,6 @@ namespace MantenedoresCRUD.modelo
             set
             {
                 estado = value;
-            }
-        }
-
-        public DateTime FechaFabricacion
-        {
-            get
-            {
-                return fechaFabricacion;
-            }
-
-            set
-            {
-                fechaFabricacion = value;
             }
         }
 

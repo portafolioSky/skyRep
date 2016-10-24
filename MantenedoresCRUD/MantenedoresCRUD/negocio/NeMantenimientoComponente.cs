@@ -24,5 +24,17 @@ namespace MantenedoresCRUD.negocio
             MantenimientoComponenteDAO mantenimiento = new MantenimientoComponenteDAO();
             mantenimiento.EliminarMantenimientoComponente(mantComp);
         }
+
+        public void insertMantenimientoComponente(MantenimientoComponente mantComp)
+        {
+            MantenimientoComponenteDAO mantenimiento = new MantenimientoComponenteDAO();
+            mantenimiento.IngresarMantenimientoComponente(mantComp);
+        }
+
+        public void updateMantenimientoAeronave(MantenimientoComponente mantComp)
+        {
+            MantenimientoComponenteDAO mantenimiento = new MantenimientoComponenteDAO();
+            mantenimiento.ModificarMantenimientoComponente(mantComp);
+        }
     }
 }

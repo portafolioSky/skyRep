@@ -20,5 +20,17 @@ namespace MantenedoresCRUD.negocio
             ComponenteDAO componente = new ComponenteDAO();
             return componente.ListarComponentes(nave);
         }
+
+        public int ultimoID()
+        {
+            ComponenteDAO componente = new ComponenteDAO();
+            return componente.UltimoID();
+        }
+
+        public int IngresarComponente(Componente componente)
+        {
+            ComponenteDAO componenteDao = new ComponenteDAO();
+            return componenteDao.IngresarComponente(componente);
+        }
     }
 }

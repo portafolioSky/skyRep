@@ -10,8 +10,6 @@
         <Rectangle Fill="#FFF4F4F5" Margin="10,56,10,10" Stroke="Black"/>
         <Label x:Name="labelTitulo" Content="Ingresar aeronave" HorizontalAlignment="Left" Margin="10,14,0,0" VerticalAlignment="Top" FontSize="16" FontWeight="Medium" Foreground="White"/>
         <Label x:Name="labelPaso" Content="Paso 1: ingresar aeronave" HorizontalAlignment="Left" Margin="21,70,0,0" VerticalAlignment="Top"/>
-        <RadioButton x:Name="radioButtonTipoAvion" Content="Avion" HorizontalAlignment="Left" Margin="21,101,0,0" VerticalAlignment="Top"/>
-        <RadioButton x:Name="radioButtonTipoHelicoptero" Content="Helicoptero" HorizontalAlignment="Left" Margin="85,101,0,0" VerticalAlignment="Top"/>
         <Label x:Name="labelMatricula" Content="Matricula" HorizontalAlignment="Left" Margin="21,121,0,0" VerticalAlignment="Top"/>
         <TextBox x:Name="textBoxMatricula" HorizontalAlignment="Left" Height="23" Margin="227,124,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
         <Label x:Name="labelMarca" Content="Marca" HorizontalAlignment="Left" Margin="21,149,0,0" VerticalAlignment="Top"/>
@@ -27,6 +25,8 @@
         <Label x:Name="labelVencimiento" Content="Fecha vencimiento certificado DGAC" HorizontalAlignment="Left" Margin="20,284,0,0" VerticalAlignment="Top"/>
         <DatePicker x:Name="datePickerVencimiento" HorizontalAlignment="Left" Margin="227,288,0,0" VerticalAlignment="Top" Width="120"/>
         <Button x:Name="buttonSiguiente" Content="Siguiente" HorizontalAlignment="Left" Margin="21,327,0,0" VerticalAlignment="Top" Width="75" RenderTransformOrigin="4.76,-3.2" Click="buttonSiguiente_Click"/>
+        <ComboBox x:Name="comboBoxTipo" HorizontalAlignment="Left" Margin="227,96,0,0" VerticalAlignment="Top" Width="120"/>
+        <Label x:Name="labelTipo" Content="Tipo aeronave" HorizontalAlignment="Left" Margin="21,92,0,0" VerticalAlignment="Top"/>
 
     </Grid>
 </Window>
